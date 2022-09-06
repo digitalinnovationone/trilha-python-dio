@@ -13,7 +13,7 @@ class Avestruz(Passaro):
         print("Avestruz não pode voar")
 
 
-# FIXME: exemplo ruim do uso de herança para "ganhar" o método voar
+# NOTE: exemplo ruim do uso de herança para "ganhar" o método voar
 class Aviao(Passaro):
     def voar(self):
         print("Avião está decolando...")
