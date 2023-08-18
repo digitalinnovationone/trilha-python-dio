@@ -10,6 +10,8 @@ print(texto + ".")
 print(texto.strip() + ".")
 print(texto.rstrip() + ".")
 print(texto.lstrip() + ".")
+print(f'{texto.strip().upper()}.')
+
 
 menu = "Python"
 
