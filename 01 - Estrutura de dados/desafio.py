@@ -125,7 +125,7 @@ def main():
         elif opcao == "s":
             valor = float(input("Informe o valor do saque: "))
 
-            saldo, extrato, numero_saquesz = sacar(
+            saldo, extrato, numero_saques = sacar(
                 saldo=saldo,
                 valor=valor,
                 extrato=extrato,
