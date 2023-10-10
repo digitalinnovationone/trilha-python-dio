@@ -8,6 +8,18 @@ Bem vindo os sistema do Banco Py
 =================================
 """
 
+menu = """
+============ Banco Py ===========
+Seleciona a opção: 
+
+[d] Depositar
+[s] Sacar
+[e] Extrato
+[q] Sair
+
+=================================
+"""
+
 ## AGÊNCIAS PRÉ DEFINIDAS PELO BANCO
 AGENCIAS_VALIDAS = ["0001", "0010", "0101", "1234"]
 
@@ -20,6 +32,10 @@ contas_ativas = [
         "nome": "Gabriel"
     }
 ]
+
+transacoes = []
+
+sessao = False
 
 ## PRÉ DEFINIÇÃO DE FORMATO DE DADOS DAS CONTAS
 def novaConta(agencia, conta, senha, nome):
@@ -39,7 +55,8 @@ def vefiricaDados(item, verificar):
 
 ## CASO TENHA ERRO OU INCONSISTÊNCIA NAS ENTRADAS, CHAMOS ESTA FUNÇÃO 
 def diretriz():
-    op = input("""
+    if sessao == False:
+        op = input("""
 ============= OPÇÕES ============
 
 DESEJA CRIAR UMA CONTA?
@@ -51,15 +68,17 @@ DESEJA CRIAR UMA CONTA?
 
 =================================
 """)
-    if op == "s": 
-        criarCont()
-    elif op == "i":
-        inicio()
-    elif op == "n" or op == "q": 
-        print("Obrigado por acessar nossos serviços!") 
-        print("\n=================================")
-        quit()
-    else: print("Opção inválida!")
+        if op == "s": 
+            criarCont()
+        elif op == "i":
+            inicio()
+        elif op == "n" or op == "q": 
+            print("Obrigado por acessar nossos serviços!") 
+            print("\n=================================")
+            quit()
+        else: print("Opção inválida!")
+    else:  
+        sessaoConta()
 
 ## FUNÇÃO PARA CRIAR UMA NOVA CONTA, VERIFICAR SE A SENHA CRIADA É VÁLIDA
 ## ADICIONANDO A NOVA CONTA AO BANCO DE DADOS
@@ -105,6 +124,7 @@ def criarCont():
 def acessaConta(ag, cc):
 
     global contas_ativas
+    global sessao
     
     for dados in contas_ativas:
         if dados["agencia"] == ag and dados["conta"] == cc :
@@ -112,13 +132,13 @@ def acessaConta(ag, cc):
             senhaHash = input("Digite sua senha: ")
             if senhaHash == dados["senha"]:
                 print(f"\n SEJA BEM VINSO A SUA CONTA \n {dados['nome']} \n")
-                    ## Aqui devemos chamar as funçoes da conta ativa... 
-                    #break
-        else:
-            print("\nNão Achamos sua conta no nosso sistema.")
-            print(contas_ativas)
-            diretriz()
-                #break
+                sessao = True
+                sessaoConta()
+
+            else:
+                print("\nNão Achamos sua conta no nosso sistema.")
+                print(contas_ativas)
+                # diretriz()
             
 ## INÍCIO DO NOSSO SISTEMA
 def inicio():
@@ -143,4 +163,66 @@ def inicio():
         else:
             print("Erro, tente novamente uma agencia válida. \n São 4 digitos numericos.")
 
+def operacao(tipo, valor):
+    global transacoes
+    codigo = (f"{tipo}{len(transacoes) +1}", f"R$ {valor}")
+    transacoes.append(codigo)
+    #print(transacoes)
+
+def sessaoConta():
+    global menu
+
+    saldo = 0
+    limiteSaque = 500
+    extrato = ""
+    numSaque = 0
+    LIMITE_SAQUES = 3
+
+    while True:
+        opcao = input(menu)
+
+        if opcao == "d":
+            print("Deposito")
+            deposito = float(input("Informe o valor de Depsito: R$ ").replace(',','.'))
+            while deposito < 1:
+                print("Deposito inválido. Insira um valor de deposito válido, acima de R$ 1.00 .")
+                deposito = float(input("Informe o valor de Depsito: R$ ").replace(',','.'))
+            else:
+                operacao("D", deposito)
+                saldo += deposito
+    
+        elif opcao == "s":
+            print("Saque")
+            if numSaque == LIMITE_SAQUES:
+                print("Você atingiu o limite de saque diário.")
+        
+            elif saldo == 0:
+                print("Você nao possue saldo suficiente para saque! Faça um deposito. :) ")
+            else:
+                saque = float(input("Informe o valor de Saque: R$ ").replace(',','.'))
+
+                if saque > limiteSaque or saque < 1:
+                    print("O valo máximo para saque é entre R$ 1,00 a R$ 500.00.\n Tente novamente com um novo valor.")
+
+                else:
+                    if saque <= saldo and saque <= limiteSaque and numSaque < LIMITE_SAQUES:
+                        saldo -= saque
+                        numSaque += 1
+                        operacao("S", saque)
+                    else:
+                        print("Operação inválida... Consulte saldo disponível para saque!")
+
+        elif opcao == "e":
+            print("Extrato")
+            for dados in transacoes: print(dados, sep="\n")
+            print(f"\nSaldo Atual: R$ {saldo:.2f}")
+
+        elif opcao == "q":
+            break
+
+        else:
+            print("Operação inválida, por favor selecione novamente a operação desejada.")
+
+
+## INICIMOS O NOSSO SISTEMA...    
 inicio()
