@@ -1,9 +1,9 @@
 class Estudante:
-    escola = "DIO"
+    escola = "DIO" #Variavel de classe
 
     def __init__(self, nome, matricula):
         self.nome = nome
-        self.matricula = matricula
+        self.matricula = matricula #Variavel de instancia
 
     def __str__(self) -> str:
         return f"{self.nome} - {self.matricula} - {self.escola}"
