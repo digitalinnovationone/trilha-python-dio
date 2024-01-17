@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "01 - ambiente virtual"
+version = "0.1.0"
+description = ""
+authors = ["Guilherme Carvalho <gui.ifsp11@gmail.com>"]
+readme = "README.md"
+packages = [{include = "01 _ ambiente virtual"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
