@@ -20,4 +20,3 @@ def somar_valores(values):
 
 exibir_resultado(12.34, 1.1415, somar)  # O resultado da operação 10 + 10 = 20
 print(media([10, 9.5]))
-
