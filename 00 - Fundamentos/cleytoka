@@ -1,0 +1,149 @@
+import random
+from datetime import datetime
+
+class ContaBancaria:
+    def __init__(self, agencia, numero):
+        self.agencia = agencia
+        self.numero = numero
+        self.saldo = 0
+        self.saques_feitos = 0
+        self.saques_diarios = 0
+        self.extrato = []
+
+    def depositar(self, valor):
+        self.saldo += valor
+        self.extrato.append(f"Depósito de R${valor:.2f}")
+        print("Depósito realizado com sucesso!")
+
+    def sacar(self, valor):
+        if self.saques_feitos < 3 and self.saques_diarios < 3 and valor <= 500 and valor <= self.saldo:
+            self.saldo -= valor
+            self.saques_feitos += 1
+            self.saques_diarios += 1
+            self.extrato.append(f"Saque de R${valor:.2f}")
+            print("Saque realizado com sucesso!")
+            print(f"Você tem {3 - self.saques_diarios} saques disponíveis hoje.")
+        elif self.saques_diarios >= 3:
+            print("Você atingiu o limite de saque diário. Tente novamente amanhã!")
+        else:
+            print("Você atingiu o limite de saque diário. Tente novamente amanhã!")
+
+    def gerar_extrato(self):
+        print("\n" + "=" * 20 + " EXTRATO " + "=" * 20 + "\n")
+        print(f"Agência: {self.agencia} | Conta: {self.numero}\n")
+        print("Operações:")
+        for operacao in self.extrato:
+            print(operacao)
+        print("\n" + "=" * 46 + "\n")
+        print(f"Saldo atual: R${self.saldo:.2f}")
+        print("=" * 46)
+
+    def reiniciar_saques_diarios(self):
+        self.saques_diarios = 0
+
+
+class Banco:
+    def __init__(self):
+        self.clientes = {}
+
+    def gerar_conta(self):
+        agencia = random.randint(100, 999)
+        numero = random.randint(10000000, 99999999)
+        return agencia, numero
+
+    def validar_cpf(self, cpf):
+        if len(cpf) != 11 or not cpf.isdigit():
+            return False
+        return True
+
+    def cadastrar_cliente(self, nome, data_nascimento, cpf, endereco):
+        if not self.validar_cpf(cpf):
+            print("CPF inválido. Deve conter exatamente 11 dígitos.")
+            return
+        if cpf not in self.clientes:
+            agencia, numero = self.gerar_conta()
+            self.clientes[cpf] = {'nome': nome, 'data_nascimento': data_nascimento, 'cpf': cpf, 'endereco': endereco, 'conta': ContaBancaria(agencia, numero)}
+            print(f"Parabéns {nome}, sua conta foi criada com sucesso!")
+            print("Segue os dados de sua conta:")
+            print(f"Agência: {agencia} | Conta: {numero}")
+        else:
+            print("CPF já cadastrado.")
+
+    def buscar_conta(self, cpf):
+        if cpf in self.clientes:
+            return self.clientes[cpf]['conta']
+        else:
+            print("Cliente não encontrado.")
+
+
+def main():
+    banco = Banco()
+
+    while True:
+        print("\n" + "=" * 20 + " MENU " + "=" * 20 + "\n")
+        print(" " * 18 + "1. Cadastrar Cliente")
+        print(" " * 18 + "2. Depositar")
+        print(" " * 18 + "3. Sacar")
+        print(" " * 18 + "4. Extrato")
+        print(" " * 18 + "0. Sair")
+        print("\n" + "=" * 46 + "\n")
+
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            nome = input("Digite o nome do cliente: ")
+            data_nascimento = input("Digite a data de nascimento do cliente (formato: DD/MM/AAAA): ")
+            cpf = input("Digite o CPF do cliente: ")
+            rua = input("Digite o nome da rua: ")
+            bairro = input("Digite o nome do bairro: ")
+            cidade = input("Digite o nome da cidade: ")
+            estado = input("Digite o nome do estado: ")
+
+            endereco = {
+                "rua": rua,
+                "bairro": bairro,
+                "cidade": cidade,
+                "estado": estado
+            }
+
+            # Validando data de nascimento
+            try:
+                data_nascimento = datetime.strptime(data_nascimento, "%d/%m/%Y")
+            except ValueError:
+                print("Data de nascimento inválida. Use o formato DD/MM/AAAA.")
+                continue
+
+            banco.cadastrar_cliente(nome, data_nascimento, cpf, endereco)
+        elif opcao == "2":
+            cpf = input("Digite o CPF do cliente: ")
+            conta = banco.buscar_conta(cpf)
+            if conta:
+                valor = float(input("Digite o valor a ser depositado: "))
+                conta.depositar(valor)
+                conta.reiniciar_saques_diarios()
+            else:
+                print("Cliente não encontrado.")
+        elif opcao == "3":
+            cpf = input("Digite o CPF do cliente: ")
+            conta = banco.buscar_conta(cpf)
+            if conta:
+                valor = float(input("Digite o valor a ser sacado: "))
+                conta.sacar(valor)  # Ajuste para decrementar a quantidade de saques disponíveis
+            else:
+                print("Cliente não encontrado.")
+        elif opcao == "4":
+            cpf = input("Digite o CPF do cliente: ")
+            conta = banco.buscar_conta(cpf)
+            if conta:
+                conta.gerar_extrato()
+            else:
+                print("Cliente não encontrado.")
+        elif opcao == "0":
+            print("Obrigado por utilizar nosso Sistema...Banco Kauffmann Agradece!!!")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+
+if __name__ == "__main__":
+    main()
