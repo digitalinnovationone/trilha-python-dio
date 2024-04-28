@@ -1,0 +1,2488 @@
+[
+    {
+        "label": "textwrap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "textwrap",
+        "description": "textwrap",
+        "detail": "textwrap",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "property",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractclassmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractproperty",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "valor",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.convertendo_tipos",
+        "description": "00 - Fundamentos.convertendo_tipos",
+        "peekOfCode": "valor = 10\nvalor_str = str(valor)\nprint(type(valor))\nprint(type(valor_str))\nprint(100 / 2)\nprint(100 // 2)",
+        "detail": "00 - Fundamentos.convertendo_tipos",
+        "documentation": {}
+    },
+    {
+        "label": "valor_str",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.convertendo_tipos",
+        "description": "00 - Fundamentos.convertendo_tipos",
+        "peekOfCode": "valor_str = str(valor)\nprint(type(valor))\nprint(type(valor_str))\nprint(100 / 2)\nprint(100 // 2)",
+        "detail": "00 - Fundamentos.convertendo_tipos",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "menu = \"\"\"\n            MENU\n[1] Depositar   [2] Sacar\n[3] Extrato     [4] Sair\n=> \"\"\"\nNUMERO_LIMITE_SAQUES = 3\nVALOR_LIMITE_SAQUE = 500\nsaldo = 0\nextrato = \"\"\nnumero_saques = 0",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "NUMERO_LIMITE_SAQUES",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "NUMERO_LIMITE_SAQUES = 3\nVALOR_LIMITE_SAQUE = 500\nsaldo = 0\nextrato = \"\"\nnumero_saques = 0\nwhile True:\n    opcao = input(menu)\n    if opcao == \"1\":\n        valor = float(input(\"Informe o valor do depósito: \"))\n        #Permite apenas valores positivo de depósito",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "VALOR_LIMITE_SAQUE",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "VALOR_LIMITE_SAQUE = 500\nsaldo = 0\nextrato = \"\"\nnumero_saques = 0\nwhile True:\n    opcao = input(menu)\n    if opcao == \"1\":\n        valor = float(input(\"Informe o valor do depósito: \"))\n        #Permite apenas valores positivo de depósito\n        if valor > 0:",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "saldo = 0\nextrato = \"\"\nnumero_saques = 0\nwhile True:\n    opcao = input(menu)\n    if opcao == \"1\":\n        valor = float(input(\"Informe o valor do depósito: \"))\n        #Permite apenas valores positivo de depósito\n        if valor > 0:\n            saldo += valor",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "extrato",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "extrato = \"\"\nnumero_saques = 0\nwhile True:\n    opcao = input(menu)\n    if opcao == \"1\":\n        valor = float(input(\"Informe o valor do depósito: \"))\n        #Permite apenas valores positivo de depósito\n        if valor > 0:\n            saldo += valor\n            extrato += f\"Depósito: +R$ {valor:.2f}\\n\"",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "numero_saques",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.desafio",
+        "description": "00 - Fundamentos.desafio",
+        "peekOfCode": "numero_saques = 0\nwhile True:\n    opcao = input(menu)\n    if opcao == \"1\":\n        valor = float(input(\"Informe o valor do depósito: \"))\n        #Permite apenas valores positivo de depósito\n        if valor > 0:\n            saldo += valor\n            extrato += f\"Depósito: +R$ {valor:.2f}\\n\"\n        else:",
+        "detail": "00 - Fundamentos.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "conta_normal",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "conta_normal = False\nconta_universitaria = False\nconta_especial = True\nsaldo = 2000\nsaque = 1500\ncheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "conta_universitaria",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "conta_universitaria = False\nconta_especial = True\nsaldo = 2000\nsaque = 1500\ncheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):\n        print(\"Saque realizado com uso do cheque especial!\")",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "conta_especial",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "conta_especial = True\nsaldo = 2000\nsaque = 1500\ncheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):\n        print(\"Saque realizado com uso do cheque especial!\")\n    else:",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "saldo = 2000\nsaque = 1500\ncheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):\n        print(\"Saque realizado com uso do cheque especial!\")\n    else:\n        print(\"Não foi possivel realizar o saque, saldo insuficiente!\")",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "saque",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "saque = 1500\ncheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):\n        print(\"Saque realizado com uso do cheque especial!\")\n    else:\n        print(\"Não foi possivel realizar o saque, saldo insuficiente!\")\nelif conta_universitaria:",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "cheque_especial",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "description": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "peekOfCode": "cheque_especial = 450\nif conta_normal:\n    if saldo >= saque:\n        print(\"Saque realizado com sucesso!\")\n    elif saque <= (saldo + cheque_especial):\n        print(\"Saque realizado com uso do cheque especial!\")\n    else:\n        print(\"Não foi possivel realizar o saque, saldo insuficiente!\")\nelif conta_universitaria:\n    if saldo >= saque:",
+        "detail": "00 - Fundamentos.estrutura_condicional_aninhada",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "description": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "peekOfCode": "saldo = 2000\nsaque = 2500\nstatus = \"Sucesso\" if saldo >= saque else \"Falha\"\nprint(f\"{status} ao realizar o saque!\")",
+        "detail": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "documentation": {}
+    },
+    {
+        "label": "saque",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "description": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "peekOfCode": "saque = 2500\nstatus = \"Sucesso\" if saldo >= saque else \"Falha\"\nprint(f\"{status} ao realizar o saque!\")",
+        "detail": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "description": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "peekOfCode": "status = \"Sucesso\" if saldo >= saque else \"Falha\"\nprint(f\"{status} ao realizar o saque!\")",
+        "detail": "00 - Fundamentos.estrutura_condicional_ternaria",
+        "documentation": {}
+    },
+    {
+        "label": "texto",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_repeticao_for",
+        "description": "00 - Fundamentos.estrutura_repeticao_for",
+        "peekOfCode": "texto = input(\"Informe um texto: \")\nVOGAIS = \"AEIOU\"\n# Exemplo utilizando um iterável\nfor letra in texto:\n    if letra.upper() in VOGAIS:\n        print(letra, end=\"\")\nelse:\n    print()  # adiciona uma quebra de linha\n# Exemplo utilizando a função built-in range\nfor numero in range(0, 51, 5):",
+        "detail": "00 - Fundamentos.estrutura_repeticao_for",
+        "documentation": {}
+    },
+    {
+        "label": "VOGAIS",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_repeticao_for",
+        "description": "00 - Fundamentos.estrutura_repeticao_for",
+        "peekOfCode": "VOGAIS = \"AEIOU\"\n# Exemplo utilizando um iterável\nfor letra in texto:\n    if letra.upper() in VOGAIS:\n        print(letra, end=\"\")\nelse:\n    print()  # adiciona uma quebra de linha\n# Exemplo utilizando a função built-in range\nfor numero in range(0, 51, 5):\n    print(numero, end=\" \")",
+        "detail": "00 - Fundamentos.estrutura_repeticao_for",
+        "documentation": {}
+    },
+    {
+        "label": "opcao",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estrutura_repeticao_while",
+        "description": "00 - Fundamentos.estrutura_repeticao_while",
+        "peekOfCode": "opcao = -1\nwhile opcao != 0:\n    opcao = int(input(\"[1] Sacar \\n[2] Extrato \\n[0] Sair \\n: \"))\n    if opcao == 1:\n        print(\"Sacando...\")\n    elif opcao == 2:\n        print(\"Exibindo o extrato...\")\nelse:\n    print(\"Obrigado por usar nosso sistema bancário, até logo!\")",
+        "detail": "00 - Fundamentos.estrutura_repeticao_while",
+        "documentation": {}
+    },
+    {
+        "label": "MAIOR_IDADE",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estruturas_condicionais",
+        "description": "00 - Fundamentos.estruturas_condicionais",
+        "peekOfCode": "MAIOR_IDADE = 18\nIDADE_ESPECIAL = 17\nidade = int(input(\"Informe sua idade: \"))\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nif idade < MAIOR_IDADE:\n    print(\"Ainda não pode tirar a CNH.\")\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nelse:",
+        "detail": "00 - Fundamentos.estruturas_condicionais",
+        "documentation": {}
+    },
+    {
+        "label": "IDADE_ESPECIAL",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estruturas_condicionais",
+        "description": "00 - Fundamentos.estruturas_condicionais",
+        "peekOfCode": "IDADE_ESPECIAL = 17\nidade = int(input(\"Informe sua idade: \"))\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nif idade < MAIOR_IDADE:\n    print(\"Ainda não pode tirar a CNH.\")\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nelse:\n    print(\"Ainda não pode tirar a CNH.\")",
+        "detail": "00 - Fundamentos.estruturas_condicionais",
+        "documentation": {}
+    },
+    {
+        "label": "idade",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.estruturas_condicionais",
+        "description": "00 - Fundamentos.estruturas_condicionais",
+        "peekOfCode": "idade = int(input(\"Informe sua idade: \"))\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nif idade < MAIOR_IDADE:\n    print(\"Ainda não pode tirar a CNH.\")\nif idade >= MAIOR_IDADE:\n    print(\"Maior de idade, pode tirar a CHN.\")\nelse:\n    print(\"Ainda não pode tirar a CNH.\")\nif idade >= MAIOR_IDADE:",
+        "detail": "00 - Fundamentos.estruturas_condicionais",
+        "documentation": {}
+    },
+    {
+        "label": "sacar",
+        "kind": 2,
+        "importPath": "00 - Fundamentos.identacao_blocos",
+        "description": "00 - Fundamentos.identacao_blocos",
+        "peekOfCode": "def sacar(valor):\n    saldo = 500\n    if saldo >= valor:\n        print(\"valor sacado!\")\n        print(\"retire o seu dinheiro na boca do caixa.\")\n    print(\"Obrigado por ser nosso cliente, tenha um bom dia!\")\ndef depositar(valor):\n    saldo = 500\n    saldo += valor\nsacar(1000)",
+        "detail": "00 - Fundamentos.identacao_blocos",
+        "documentation": {}
+    },
+    {
+        "label": "depositar",
+        "kind": 2,
+        "importPath": "00 - Fundamentos.identacao_blocos",
+        "description": "00 - Fundamentos.identacao_blocos",
+        "peekOfCode": "def depositar(valor):\n    saldo = 500\n    saldo += valor\nsacar(1000)",
+        "detail": "00 - Fundamentos.identacao_blocos",
+        "documentation": {}
+    },
+    {
+        "label": "produto_1",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_aritmeticos",
+        "description": "00 - Fundamentos.operadores_aritmeticos",
+        "peekOfCode": "produto_1 = 20\nproduto_2 = 10\nprint(produto_1 + produto_2)\nprint(produto_1 - produto_2)\nprint(produto_1 / produto_2)\nprint(produto_1 // produto_2)\nprint(produto_1 * produto_2)\nprint(produto_1 % produto_2)\nprint(produto_1 ** produto_2)\nx = (10 + 5) * 4",
+        "detail": "00 - Fundamentos.operadores_aritmeticos",
+        "documentation": {}
+    },
+    {
+        "label": "produto_2",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_aritmeticos",
+        "description": "00 - Fundamentos.operadores_aritmeticos",
+        "peekOfCode": "produto_2 = 10\nprint(produto_1 + produto_2)\nprint(produto_1 - produto_2)\nprint(produto_1 / produto_2)\nprint(produto_1 // produto_2)\nprint(produto_1 * produto_2)\nprint(produto_1 % produto_2)\nprint(produto_1 ** produto_2)\nx = (10 + 5) * 4\ny = (10 / 2) + 25 * ((2 - 2) ** 2)",
+        "detail": "00 - Fundamentos.operadores_aritmeticos",
+        "documentation": {}
+    },
+    {
+        "label": "x",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_aritmeticos",
+        "description": "00 - Fundamentos.operadores_aritmeticos",
+        "peekOfCode": "x = (10 + 5) * 4\ny = (10 / 2) + 25 * ((2 - 2) ** 2)\nprint(x)\nprint(y)",
+        "detail": "00 - Fundamentos.operadores_aritmeticos",
+        "documentation": {}
+    },
+    {
+        "label": "y",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_aritmeticos",
+        "description": "00 - Fundamentos.operadores_aritmeticos",
+        "peekOfCode": "y = (10 / 2) + 25 * ((2 - 2) ** 2)\nprint(x)\nprint(y)",
+        "detail": "00 - Fundamentos.operadores_aritmeticos",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_associacao",
+        "description": "00 - Fundamentos.operadores_associacao",
+        "peekOfCode": "frutas = [\"limao\", \"uva\"]\ncurso = \"Curso de python\"\nprint(\"laranja\" not in frutas)\nprint(\"limao\" in frutas)\nprint(\"Python\" in curso)",
+        "detail": "00 - Fundamentos.operadores_associacao",
+        "documentation": {}
+    },
+    {
+        "label": "curso",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_associacao",
+        "description": "00 - Fundamentos.operadores_associacao",
+        "peekOfCode": "curso = \"Curso de python\"\nprint(\"laranja\" not in frutas)\nprint(\"limao\" in frutas)\nprint(\"Python\" in curso)",
+        "detail": "00 - Fundamentos.operadores_associacao",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_atribuicao",
+        "description": "00 - Fundamentos.operadores_atribuicao",
+        "peekOfCode": "saldo = 500\nprint(saldo)\nsaldo = 200\nprint(saldo)\nsaldo += 10\nprint(saldo)\nsaldo -= 5\nprint(saldo)\nsaldo //= 2\nprint(saldo)",
+        "detail": "00 - Fundamentos.operadores_atribuicao",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_atribuicao",
+        "description": "00 - Fundamentos.operadores_atribuicao",
+        "peekOfCode": "saldo = 200\nprint(saldo)\nsaldo += 10\nprint(saldo)\nsaldo -= 5\nprint(saldo)\nsaldo //= 2\nprint(saldo)\nsaldo /= 2\nprint(saldo)",
+        "detail": "00 - Fundamentos.operadores_atribuicao",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_comparacao",
+        "description": "00 - Fundamentos.operadores_comparacao",
+        "peekOfCode": "saldo = 200\nsaque = 200\nprint(saldo == saque)\nprint(saldo != saque)\nprint(saldo > saque)\nprint(saldo >= saque)\nprint(saldo < saque)\nprint(saldo <= saque)",
+        "detail": "00 - Fundamentos.operadores_comparacao",
+        "documentation": {}
+    },
+    {
+        "label": "saque",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_comparacao",
+        "description": "00 - Fundamentos.operadores_comparacao",
+        "peekOfCode": "saque = 200\nprint(saldo == saque)\nprint(saldo != saque)\nprint(saldo > saque)\nprint(saldo >= saque)\nprint(saldo < saque)\nprint(saldo <= saque)",
+        "detail": "00 - Fundamentos.operadores_comparacao",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_identidade",
+        "description": "00 - Fundamentos.operadores_identidade",
+        "peekOfCode": "saldo = 1000\nlimite = 1000\nprint(saldo is limite)\nprint(saldo is not limite)",
+        "detail": "00 - Fundamentos.operadores_identidade",
+        "documentation": {}
+    },
+    {
+        "label": "limite",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_identidade",
+        "description": "00 - Fundamentos.operadores_identidade",
+        "peekOfCode": "limite = 1000\nprint(saldo is limite)\nprint(saldo is not limite)",
+        "detail": "00 - Fundamentos.operadores_identidade",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "saldo = 1000\nsaque = 250\nlimite = 200\nconta_especial = True\nexp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque\nprint(exp)\nexp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "saque",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "saque = 250\nlimite = 200\nconta_especial = True\nexp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque\nprint(exp)\nexp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "limite",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "limite = 200\nconta_especial = True\nexp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque\nprint(exp)\nexp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "conta_especial",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "conta_especial = True\nexp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque\nprint(exp)\nexp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "exp",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "exp = saldo >= saque and saque <= limite or conta_especial and saldo >= saque\nprint(exp)\nexp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "exp_2",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "exp_2 = (saldo >= saque and saque <= limite) or (conta_especial and saldo >= saque)\nprint(exp_2)\nconta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "conta_normal_com_saldo_suficiente",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "conta_normal_com_saldo_suficiente = saldo >= saque and saque <= limite\nconta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "conta_especial_com_saldo_suficiente",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "conta_especial_com_saldo_suficiente = conta_especial and saldo >= saque\nexp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "exp_3",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.operadores_logicos",
+        "description": "00 - Fundamentos.operadores_logicos",
+        "peekOfCode": "exp_3 = conta_normal_com_saldo_suficiente or conta_especial_com_saldo_suficiente\nprint(exp_3)",
+        "detail": "00 - Fundamentos.operadores_logicos",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.print_input",
+        "description": "00 - Fundamentos.print_input",
+        "peekOfCode": "nome = input(\"Informe o seu nome: \")\nidade = input(\"Informe a sua idade: \")\nprint(nome, idade)\nprint(nome, idade, end=\"...\\n\")\nprint(nome, idade, sep=\"#\", end=\"...\\n\")\nprint(nome, idade, sep=\"#\")",
+        "detail": "00 - Fundamentos.print_input",
+        "documentation": {}
+    },
+    {
+        "label": "idade",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.print_input",
+        "description": "00 - Fundamentos.print_input",
+        "peekOfCode": "idade = input(\"Informe a sua idade: \")\nprint(nome, idade)\nprint(nome, idade, end=\"...\\n\")\nprint(nome, idade, sep=\"#\", end=\"...\\n\")\nprint(nome, idade, sep=\"#\")",
+        "detail": "00 - Fundamentos.print_input",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_1",
+        "description": "00 - Fundamentos.string_1",
+        "peekOfCode": "nome = \"gUIlherME\"\nprint(nome.upper())\nprint(nome.lower())\nprint(nome.title())\ntexto = \"  Olá mundo!    \"\nprint(texto + \".\")\nprint(texto.strip() + \".\")\nprint(texto.rstrip() + \".\")\nprint(texto.lstrip() + \".\")\nmenu = \"Python\"",
+        "detail": "00 - Fundamentos.string_1",
+        "documentation": {}
+    },
+    {
+        "label": "texto",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_1",
+        "description": "00 - Fundamentos.string_1",
+        "peekOfCode": "texto = \"  Olá mundo!    \"\nprint(texto + \".\")\nprint(texto.strip() + \".\")\nprint(texto.rstrip() + \".\")\nprint(texto.lstrip() + \".\")\nmenu = \"Python\"\nprint(\"####\" + menu + \"####\")\nprint(menu.center(14))\nprint(menu.center(14, \"#\"))\nprint(\"-\".join(menu))",
+        "detail": "00 - Fundamentos.string_1",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_1",
+        "description": "00 - Fundamentos.string_1",
+        "peekOfCode": "menu = \"Python\"\nprint(\"####\" + menu + \"####\")\nprint(menu.center(14))\nprint(menu.center(14, \"#\"))\nprint(\"-\".join(menu))",
+        "detail": "00 - Fundamentos.string_1",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "nome = \"Guilherme\"\nidade = 28\nprofissao = \"Progamador\"\nlinguagem = \"Python\"\nsaldo = 45.435\ndados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "idade",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "idade = 28\nprofissao = \"Progamador\"\nlinguagem = \"Python\"\nsaldo = 45.435\ndados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(nome=nome, idade=idade))",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "profissao",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "profissao = \"Progamador\"\nlinguagem = \"Python\"\nsaldo = 45.435\ndados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(nome=nome, idade=idade))\nprint(\"Nome: {name} Idade: {age} {name} {name} {age}\".format(age=idade, name=nome))",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "linguagem",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "linguagem = \"Python\"\nsaldo = 45.435\ndados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(nome=nome, idade=idade))\nprint(\"Nome: {name} Idade: {age} {name} {name} {age}\".format(age=idade, name=nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(**dados))",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "saldo",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "saldo = 45.435\ndados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(nome=nome, idade=idade))\nprint(\"Nome: {name} Idade: {age} {name} {name} {age}\".format(age=idade, name=nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(**dados))\nprint(f\"Nome: {nome} Idade: {idade}\")",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "dados",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_2",
+        "description": "00 - Fundamentos.string_2",
+        "peekOfCode": "dados = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(\"Nome: %s Idade: %d\" % (nome, idade))\nprint(\"Nome: {} Idade: {}\".format(nome, idade))\nprint(\"Nome: {1} Idade: {0}\".format(idade, nome))\nprint(\"Nome: {1} Idade: {0} Nome: {1} {1}\".format(idade, nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(nome=nome, idade=idade))\nprint(\"Nome: {name} Idade: {age} {name} {name} {age}\".format(age=idade, name=nome))\nprint(\"Nome: {nome} Idade: {idade}\".format(**dados))\nprint(f\"Nome: {nome} Idade: {idade}\")\nprint(f\"Nome: {nome} Idade: {idade} Saldo: {saldo:.2f}\")",
+        "detail": "00 - Fundamentos.string_2",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_3",
+        "description": "00 - Fundamentos.string_3",
+        "peekOfCode": "nome = \"Guilherme Arthur de Carvalho\"\nprint(nome[0])\nprint(nome[-2])\nprint(nome[:9])\nprint(nome[10:])\nprint(nome[10:16])\nprint(nome[10:16:2])\nprint(nome[:])\nprint(nome[::-1])",
+        "detail": "00 - Fundamentos.string_3",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_4",
+        "description": "00 - Fundamentos.string_4",
+        "peekOfCode": "nome = \"Guilherme\"\nmensagem = f\"\"\"\n   Olá meu nome é {nome},\n Eu estou aprendendo Python.\n     Essa mensagem tem diferentes recuos.\n\"\"\"\nprint(mensagem)\nprint(\n    \"\"\"\n    ============= MENU =============",
+        "detail": "00 - Fundamentos.string_4",
+        "documentation": {}
+    },
+    {
+        "label": "mensagem",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.string_4",
+        "description": "00 - Fundamentos.string_4",
+        "peekOfCode": "mensagem = f\"\"\"\n   Olá meu nome é {nome},\n Eu estou aprendendo Python.\n     Essa mensagem tem diferentes recuos.\n\"\"\"\nprint(mensagem)\nprint(\n    \"\"\"\n    ============= MENU =============\n    1 - Depositar",
+        "detail": "00 - Fundamentos.string_4",
+        "documentation": {}
+    },
+    {
+        "label": "nome",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.variaveis_constantes",
+        "description": "00 - Fundamentos.variaveis_constantes",
+        "peekOfCode": "nome = \"Guilherme\"\nidade = 28\nnome, idade = \"Giovanna\", 27\nprint(nome, idade)\nlimite_saque_diario = 1000\nBRAZILIAN_STATES = [\"SP\", \"RJ\", \"SC\", \"RS\"]\nprint(BRAZILIAN_STATES)",
+        "detail": "00 - Fundamentos.variaveis_constantes",
+        "documentation": {}
+    },
+    {
+        "label": "idade",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.variaveis_constantes",
+        "description": "00 - Fundamentos.variaveis_constantes",
+        "peekOfCode": "idade = 28\nnome, idade = \"Giovanna\", 27\nprint(nome, idade)\nlimite_saque_diario = 1000\nBRAZILIAN_STATES = [\"SP\", \"RJ\", \"SC\", \"RS\"]\nprint(BRAZILIAN_STATES)",
+        "detail": "00 - Fundamentos.variaveis_constantes",
+        "documentation": {}
+    },
+    {
+        "label": "limite_saque_diario",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.variaveis_constantes",
+        "description": "00 - Fundamentos.variaveis_constantes",
+        "peekOfCode": "limite_saque_diario = 1000\nBRAZILIAN_STATES = [\"SP\", \"RJ\", \"SC\", \"RS\"]\nprint(BRAZILIAN_STATES)",
+        "detail": "00 - Fundamentos.variaveis_constantes",
+        "documentation": {}
+    },
+    {
+        "label": "BRAZILIAN_STATES",
+        "kind": 5,
+        "importPath": "00 - Fundamentos.variaveis_constantes",
+        "description": "00 - Fundamentos.variaveis_constantes",
+        "peekOfCode": "BRAZILIAN_STATES = [\"SP\", \"RJ\", \"SC\", \"RS\"]\nprint(BRAZILIAN_STATES)",
+        "detail": "00 - Fundamentos.variaveis_constantes",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "peekOfCode": "frutas = [\"laranja\", \"maca\", \"uva\"]\nprint(frutas)\nfrutas = []\nprint(frutas)\nletras = list(\"python\")\nprint(letras)\nnumeros = list(range(10))\nprint(numeros)\ncarro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\nprint(carro)",
+        "detail": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "peekOfCode": "frutas = []\nprint(frutas)\nletras = list(\"python\")\nprint(letras)\nnumeros = list(range(10))\nprint(numeros)\ncarro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\nprint(carro)",
+        "detail": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "documentation": {}
+    },
+    {
+        "label": "letras",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "peekOfCode": "letras = list(\"python\")\nprint(letras)\nnumeros = list(range(10))\nprint(numeros)\ncarro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\nprint(carro)",
+        "detail": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "peekOfCode": "numeros = list(range(10))\nprint(numeros)\ncarro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\nprint(carro)",
+        "detail": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "documentation": {}
+    },
+    {
+        "label": "carro",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "peekOfCode": "carro = [\"Ferrari\", \"F8\", 4200000, 2020, 2900, \"São Paulo\", True]\nprint(carro)",
+        "detail": "01 - Estrutura de dados.01 - Listas.00_declarando_listas",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.01_acesso_direto",
+        "description": "01 - Estrutura de dados.01 - Listas.01_acesso_direto",
+        "peekOfCode": "frutas = [\"maçã\", \"laranja\", \"uva\", \"pera\"]\nprint(frutas[0])  # maçã\nprint(frutas[2])  # uva",
+        "detail": "01 - Estrutura de dados.01 - Listas.01_acesso_direto",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.02_indices_negativos",
+        "description": "01 - Estrutura de dados.01 - Listas.02_indices_negativos",
+        "peekOfCode": "frutas = [\"maçã\", \"laranja\", \"uva\", \"pera\"]\nprint(frutas[-1])  # pera\nprint(frutas[-3])  # laranja",
+        "detail": "01 - Estrutura de dados.01 - Listas.02_indices_negativos",
+        "documentation": {}
+    },
+    {
+        "label": "matriz",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.03_matriz",
+        "description": "01 - Estrutura de dados.01 - Listas.03_matriz",
+        "peekOfCode": "matriz = [\n    [1, \"a\", 2],\n    [\"b\", 3, 4],\n    [6, 5, \"c\"]\n]\nprint(matriz[0])  # [1, \"a\", 2]\nprint(matriz[0][0])  # 1\nprint(matriz[0][-1])  # 2\nprint(matriz[-1][-1])  # \"c\"",
+        "detail": "01 - Estrutura de dados.01 - Listas.03_matriz",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.04_fatiamento",
+        "description": "01 - Estrutura de dados.01 - Listas.04_fatiamento",
+        "peekOfCode": "lista = [\"p\", \"y\", \"t\", \"h\", \"o\", \"n\"]\nprint(lista[2:])  # [\"t\", \"h\", \"o\", \"n\"]\nprint(lista[:2])  # [\"p\", \"y\"]\nprint(lista[1:3])  # [\"y\", \"t\"]\nprint(lista[0:3:2])  # [\"p\", \"t\"]\nprint(lista[::])  # [\"p\", \"y\", \"t\", \"h\", \"o\", \"n\"]\nprint(lista[::-1])  # [\"n\", \"o\", \"h\", \"t\", \"y\", \"p\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.04_fatiamento",
+        "documentation": {}
+    },
+    {
+        "label": "carros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.05_iterar_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.05_iterar_listas",
+        "peekOfCode": "carros = [\"gol\", \"celta\", \"palio\"]\nfor carro in carros:\n    print(carro)\nfor indice, carro in enumerate(carros):\n    print(f\"{indice}: {carro}\")",
+        "detail": "01 - Estrutura de dados.01 - Listas.05_iterar_listas",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "peekOfCode": "numeros = [1, 30, 21, 2, 9, 65, 34]\npares = [numero for numero in numeros if numero % 2 == 0]\nprint(pares)\n# Modificar valores\nnumeros = [1, 30, 21, 2, 9, 65, 34]\nquadrado = [numero**2 for numero in numeros]\nprint(quadrado)",
+        "detail": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "documentation": {}
+    },
+    {
+        "label": "pares",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "peekOfCode": "pares = [numero for numero in numeros if numero % 2 == 0]\nprint(pares)\n# Modificar valores\nnumeros = [1, 30, 21, 2, 9, 65, 34]\nquadrado = [numero**2 for numero in numeros]\nprint(quadrado)",
+        "detail": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "peekOfCode": "numeros = [1, 30, 21, 2, 9, 65, 34]\nquadrado = [numero**2 for numero in numeros]\nprint(quadrado)",
+        "detail": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "documentation": {}
+    },
+    {
+        "label": "quadrado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "description": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "peekOfCode": "quadrado = [numero**2 for numero in numeros]\nprint(quadrado)",
+        "detail": "01 - Estrutura de dados.01 - Listas.06_compreensao_de_listas",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.07_append",
+        "description": "01 - Estrutura de dados.01 - Listas.07_append",
+        "peekOfCode": "lista = []\nlista.append(1)\nlista.append(\"Python\")\nlista.append([40, 30, 20])\nprint(lista)  # [1, \"Python\", [40, 30, 20]]",
+        "detail": "01 - Estrutura de dados.01 - Listas.07_append",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.08_clear",
+        "description": "01 - Estrutura de dados.01 - Listas.08_clear",
+        "peekOfCode": "lista = [1, \"Python\", [40, 30, 20]]\nprint(lista)  # [1, \"Python\", [40, 30, 20]]\nlista.clear()\nprint(lista)  # []",
+        "detail": "01 - Estrutura de dados.01 - Listas.08_clear",
+        "documentation": {}
+    },
+    {
+        "label": "lista",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.09_copy",
+        "description": "01 - Estrutura de dados.01 - Listas.09_copy",
+        "peekOfCode": "lista = [1, \"Python\", [40, 30, 20]]\nlista.copy()\nprint(lista)  # [1, \"Python\", [40, 30, 20]]",
+        "detail": "01 - Estrutura de dados.01 - Listas.09_copy",
+        "documentation": {}
+    },
+    {
+        "label": "cores",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.10_count",
+        "description": "01 - Estrutura de dados.01 - Listas.10_count",
+        "peekOfCode": "cores = [\"vermelho\", \"azul\", \"verde\", \"azul\"]\nprint(cores.count(\"vermelho\"))  # 1\nprint(cores.count(\"azul\"))  # 2\nprint(cores.count(\"verde\"))  # 1",
+        "detail": "01 - Estrutura de dados.01 - Listas.10_count",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.11_extend",
+        "description": "01 - Estrutura de dados.01 - Listas.11_extend",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\"]\nprint(linguagens)  # [\"python\", \"js\", \"c\"]\nlinguagens.extend([\"java\", \"csharp\"])\nprint(linguagens)  # [\"python\", \"js\", \"c\", \"java\", \"csharp\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.11_extend",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.12_index",
+        "description": "01 - Estrutura de dados.01 - Listas.12_index",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nprint(linguagens.index(\"java\"))  # 3\nprint(linguagens.index(\"python\"))  # 0",
+        "detail": "01 - Estrutura de dados.01 - Listas.12_index",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.13_pop",
+        "description": "01 - Estrutura de dados.01 - Listas.13_pop",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nprint(linguagens.pop())  # csharp\nprint(linguagens.pop())  # java\nprint(linguagens.pop())  # c\nprint(linguagens.pop(0))  # python",
+        "detail": "01 - Estrutura de dados.01 - Listas.13_pop",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.14_remove",
+        "description": "01 - Estrutura de dados.01 - Listas.14_remove",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.remove(\"c\")\nprint(linguagens)  # [\"python\", \"js\", \"java\", \"csharp\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.14_remove",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.15_reverse",
+        "description": "01 - Estrutura de dados.01 - Listas.15_reverse",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.reverse()\nprint(linguagens)  # [\"csharp\", \"java\", \"c\", \"js\", \"python\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.15_reverse",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "description": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort()  # [\"c\", \"csharp\", \"java\", \"js\", \"python\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(reverse=True)  # [\"python\", \"js\", \"java\", \"csharp\", \"c\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x))  # [\"c\", \"js\", \"java\", \"python\", \"csharp\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "description": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(reverse=True)  # [\"python\", \"js\", \"java\", \"csharp\", \"c\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x))  # [\"c\", \"js\", \"java\", \"python\", \"csharp\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x), reverse=True)  # [\"python\", \"csharp\", \"java\", \"js\", \"c\"]\nprint(linguagens)",
+        "detail": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "description": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x))  # [\"c\", \"js\", \"java\", \"python\", \"csharp\"]\nprint(linguagens)\nlinguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x), reverse=True)  # [\"python\", \"csharp\", \"java\", \"js\", \"c\"]\nprint(linguagens)",
+        "detail": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "description": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nlinguagens.sort(key=lambda x: len(x), reverse=True)  # [\"python\", \"csharp\", \"java\", \"js\", \"c\"]\nprint(linguagens)",
+        "detail": "01 - Estrutura de dados.01 - Listas.16_sort",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.17_len",
+        "description": "01 - Estrutura de dados.01 - Listas.17_len",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nprint(len(linguagens))  # 5",
+        "detail": "01 - Estrutura de dados.01 - Listas.17_len",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.01 - Listas.18_sorted",
+        "description": "01 - Estrutura de dados.01 - Listas.18_sorted",
+        "peekOfCode": "linguagens = [\"python\", \"js\", \"c\", \"java\", \"csharp\"]\nprint(sorted(linguagens, key=lambda x: len(x)))  # [\"c\", \"js\", \"java\", \"python\", \"csharp\"]\nprint(sorted(linguagens, key=lambda x: len(x), reverse=True))  # [\"python\", \"csharp\", \"java\", \"js\", \"c\"]",
+        "detail": "01 - Estrutura de dados.01 - Listas.18_sorted",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "description": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "peekOfCode": "frutas = (\n    \"laranja\",\n    \"pera\",\n    \"uva\",\n)\nprint(frutas)\nletras = tuple(\"python\")\nprint(letras)\nnumeros = tuple([1, 2, 3, 4])\nprint(numeros)",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "documentation": {}
+    },
+    {
+        "label": "letras",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "description": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "peekOfCode": "letras = tuple(\"python\")\nprint(letras)\nnumeros = tuple([1, 2, 3, 4])\nprint(numeros)\npais = (\"Brasil\",)\nprint(pais)",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "description": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "peekOfCode": "numeros = tuple([1, 2, 3, 4])\nprint(numeros)\npais = (\"Brasil\",)\nprint(pais)",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "documentation": {}
+    },
+    {
+        "label": "pais",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "description": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "peekOfCode": "pais = (\"Brasil\",)\nprint(pais)",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.00_declarando_tuplas",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.01_acesso_direto",
+        "description": "01 - Estrutura de dados.02 - Tuplas.01_acesso_direto",
+        "peekOfCode": "frutas = (\"maçã\", \"laranja\", \"uva\", \"pera\",)\nprint(frutas[0])  # maçã\nprint(frutas[2])  # uva",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.01_acesso_direto",
+        "documentation": {}
+    },
+    {
+        "label": "frutas",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.03_indices_negativos",
+        "description": "01 - Estrutura de dados.02 - Tuplas.03_indices_negativos",
+        "peekOfCode": "frutas = (\n    \"maçã\",\n    \"laranja\",\n    \"uva\",\n    \"pera\",\n)\nprint(frutas[-1])  # pera\nprint(frutas[-3])  # laranja",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.03_indices_negativos",
+        "documentation": {}
+    },
+    {
+        "label": "matriz",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.04_matriz",
+        "description": "01 - Estrutura de dados.02 - Tuplas.04_matriz",
+        "peekOfCode": "matriz = (\n    (1, \"a\", 2),\n    (\"b\", 3, 4),\n    (6, 5, \"c\"),\n)\nprint(matriz[0])  # (1, \"a\", 2)\nprint(matriz[0][0])  # 1\nprint(matriz[0][-1])  # 2\nprint(matriz[-1][-1])  # \"c\"",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.04_matriz",
+        "documentation": {}
+    },
+    {
+        "label": "tupla",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.05_fatiamento",
+        "description": "01 - Estrutura de dados.02 - Tuplas.05_fatiamento",
+        "peekOfCode": "tupla = (\"p\", \"y\", \"t\", \"h\", \"o\", \"n\",)\nprint(tupla[2:])  # (\"t\", \"h\", \"o\", \"n\")\nprint(tupla[:2])  # (\"p\", \"y\")\nprint(tupla[1:3])  # (\"y\", \"t\")\nprint(tupla[0:3:2])  # (\"p\", \"t\")\nprint(tupla[::])  # (\"p\", \"y\", \"t\", \"h\", \"o\", \"n\")\nprint(tupla[::-1])  # (\"n\", \"o\", \"h\", \"t\", \"y\", \"p\")",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.05_fatiamento",
+        "documentation": {}
+    },
+    {
+        "label": "carros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.06_iterar_tuplas",
+        "description": "01 - Estrutura de dados.02 - Tuplas.06_iterar_tuplas",
+        "peekOfCode": "carros = (\n    \"gol\",\n    \"celta\",\n    \"palio\",\n)\nfor carro in carros:\n    print(carro)\nfor indice, carro in enumerate(carros):\n    print(f\"{indice}: {carro}\")",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.06_iterar_tuplas",
+        "documentation": {}
+    },
+    {
+        "label": "cores",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.07_count",
+        "description": "01 - Estrutura de dados.02 - Tuplas.07_count",
+        "peekOfCode": "cores = (\n    \"vermelho\",\n    \"azul\",\n    \"verde\",\n    \"azul\",\n)\nprint(cores.count(\"vermelho\"))  # 1\nprint(cores.count(\"azul\"))  # 2\nprint(cores.count(\"verde\"))  # 1",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.07_count",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.08_index",
+        "description": "01 - Estrutura de dados.02 - Tuplas.08_index",
+        "peekOfCode": "linguagens = (\"python\", \"js\", \"c\", \"java\", \"csharp\",)\nprint(linguagens.index(\"java\"))  # 3\nprint(linguagens.index(\"python\"))  # 0",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.08_index",
+        "documentation": {}
+    },
+    {
+        "label": "linguagens",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.02 - Tuplas.09_len",
+        "description": "01 - Estrutura de dados.02 - Tuplas.09_len",
+        "peekOfCode": "linguagens = (\n    \"python\",\n    \"js\",\n    \"c\",\n    \"java\",\n    \"csharp\",\n)\nprint(len(linguagens))  # 5",
+        "detail": "01 - Estrutura de dados.02 - Tuplas.09_len",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "peekOfCode": "numeros = set([1, 2, 3, 1, 3, 4])\nprint(numeros)  # {1, 2, 3, 4}\nletras = set(\"abacaxi\")\nprint(letras)  # {\"b\", \"a\", \"c\", \"x\", \"i\"}\ncarros = set((\"palio\", \"gol\", \"celta\", \"palio\"))\nprint(carros)  # {\"gol\", \"celta\", \"palio\"}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "documentation": {}
+    },
+    {
+        "label": "letras",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "peekOfCode": "letras = set(\"abacaxi\")\nprint(letras)  # {\"b\", \"a\", \"c\", \"x\", \"i\"}\ncarros = set((\"palio\", \"gol\", \"celta\", \"palio\"))\nprint(carros)  # {\"gol\", \"celta\", \"palio\"}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "documentation": {}
+    },
+    {
+        "label": "carros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "peekOfCode": "carros = set((\"palio\", \"gol\", \"celta\", \"palio\"))\nprint(carros)  # {\"gol\", \"celta\", \"palio\"}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.00_declarando_conjuntos",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "peekOfCode": "numeros = {1, 2, 3, 2}\nnumeros = list(numeros)\nprint(numeros[0])",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "peekOfCode": "numeros = list(numeros)\nprint(numeros[0])",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "carros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.02_iterar_conjuntos",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.02_iterar_conjuntos",
+        "peekOfCode": "carros = {\"gol\", \"celta\", \"palio\"}\nfor carro in carros:\n    print(carro)\nfor indice, carro in enumerate(carros):\n    print(f\"{indice}: {carro}\")",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.02_iterar_conjuntos",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "peekOfCode": "conjunto_a = {1, 2}\nconjunto_b = {3, 4}\nresultado = conjunto_a.union(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "peekOfCode": "conjunto_b = {3, 4}\nresultado = conjunto_a.union(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "peekOfCode": "resultado = conjunto_a.union(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.03_union",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "peekOfCode": "conjunto_a = {1, 2, 3}\nconjunto_b = {2, 3, 4}\nresultado = conjunto_a.intersection(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "peekOfCode": "conjunto_b = {2, 3, 4}\nresultado = conjunto_a.intersection(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "peekOfCode": "resultado = conjunto_a.intersection(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.04_intersection",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "peekOfCode": "conjunto_a = {1, 2, 3}\nconjunto_b = {2, 3, 4}\nresultado = conjunto_a.difference(conjunto_b)\nprint(resultado)\nresultado = conjunto_b.difference(conjunto_a)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "peekOfCode": "conjunto_b = {2, 3, 4}\nresultado = conjunto_a.difference(conjunto_b)\nprint(resultado)\nresultado = conjunto_b.difference(conjunto_a)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "peekOfCode": "resultado = conjunto_a.difference(conjunto_b)\nprint(resultado)\nresultado = conjunto_b.difference(conjunto_a)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "peekOfCode": "resultado = conjunto_b.difference(conjunto_a)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.05_difference",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "peekOfCode": "conjunto_a = {1, 2, 3}\nconjunto_b = {2, 3, 4}\nresultado = conjunto_a.symmetric_difference(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "peekOfCode": "conjunto_b = {2, 3, 4}\nresultado = conjunto_a.symmetric_difference(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "peekOfCode": "resultado = conjunto_a.symmetric_difference(conjunto_b)\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.06_symmetric_difference",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "peekOfCode": "conjunto_a = {1, 2, 3}\nconjunto_b = {4, 1, 2, 5, 6, 3}\nresultado = conjunto_a.issubset(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_b.issubset(conjunto_a)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "peekOfCode": "conjunto_b = {4, 1, 2, 5, 6, 3}\nresultado = conjunto_a.issubset(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_b.issubset(conjunto_a)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "peekOfCode": "resultado = conjunto_a.issubset(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_b.issubset(conjunto_a)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "peekOfCode": "resultado = conjunto_b.issubset(conjunto_a)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.07_issubset",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "peekOfCode": "conjunto_a = {1, 2, 3}\nconjunto_b = {4, 1, 2, 5, 6, 3}\nresultado = conjunto_a.issuperset(conjunto_b)  # False\nprint(resultado)\nresultado = conjunto_b.issuperset(conjunto_a)  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "peekOfCode": "conjunto_b = {4, 1, 2, 5, 6, 3}\nresultado = conjunto_a.issuperset(conjunto_b)  # False\nprint(resultado)\nresultado = conjunto_b.issuperset(conjunto_a)  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "peekOfCode": "resultado = conjunto_a.issuperset(conjunto_b)  # False\nprint(resultado)\nresultado = conjunto_b.issuperset(conjunto_a)  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "peekOfCode": "resultado = conjunto_b.issuperset(conjunto_a)  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.08_issuperset",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_a",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "peekOfCode": "conjunto_a = {1, 2, 3, 4, 5}\nconjunto_b = {6, 7, 8, 9}\nconjunto_c = {1, 0}\nresultado = conjunto_a.isdisjoint(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_a.isdisjoint(conjunto_c)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_b",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "peekOfCode": "conjunto_b = {6, 7, 8, 9}\nconjunto_c = {1, 0}\nresultado = conjunto_a.isdisjoint(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_a.isdisjoint(conjunto_c)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "documentation": {}
+    },
+    {
+        "label": "conjunto_c",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "peekOfCode": "conjunto_c = {1, 0}\nresultado = conjunto_a.isdisjoint(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_a.isdisjoint(conjunto_c)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "peekOfCode": "resultado = conjunto_a.isdisjoint(conjunto_b)  # True\nprint(resultado)\nresultado = conjunto_a.isdisjoint(conjunto_c)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "peekOfCode": "resultado = conjunto_a.isdisjoint(conjunto_c)  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.09_isdisjoint",
+        "documentation": {}
+    },
+    {
+        "label": "sorteio",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.10_add",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.10_add",
+        "peekOfCode": "sorteio = {1, 23}\nsorteio.add(25)  # {1, 23, 25}\nprint(sorteio)\nsorteio.add(42)  # {1, 23, 25, 42}\nprint(sorteio)\nsorteio.add(25)  # {1, 23, 25, 42}\nprint(sorteio)",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.10_add",
+        "documentation": {}
+    },
+    {
+        "label": "sorteio",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.11_clear",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.11_clear",
+        "peekOfCode": "sorteio = {1, 23}\nprint(sorteio)  # {1,23}\nsorteio.clear()\nprint(sorteio)  # {}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.11_clear",
+        "documentation": {}
+    },
+    {
+        "label": "sorteio",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.12_copy",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.12_copy",
+        "peekOfCode": "sorteio = {1, 23}\nprint(sorteio)  # {1, 23}\nsorteio.copy()\nprint(sorteio)  # {1, 23}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.12_copy",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.13_discard",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.13_discard",
+        "peekOfCode": "numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}\nprint(numeros)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 0}\nnumeros.discard(1)\nnumeros.discard(45)\nprint(numeros)  # {2, 3, 4, 5, 6, 7, 8, 9, 0}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.13_discard",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.14_pop",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.14_pop",
+        "peekOfCode": "numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}\nprint(numeros)  # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}\nprint(numeros.pop())  # 0\nprint(numeros.pop())  # 1\nprint(numeros)  # {2, 3, 4, 5, 6, 7, 8, 9}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.14_pop",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.15_remove",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.15_remove",
+        "peekOfCode": "numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}\nprint(numeros)  # {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}\nprint(numeros.remove(0))  # 0\nprint(numeros)  # {1, 2, 3, 4, 5, 6, 7, 8, 9}",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.15_remove",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.16_len",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.16_len",
+        "peekOfCode": "numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}\nprint(len(numeros))  # 10",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.16_len",
+        "documentation": {}
+    },
+    {
+        "label": "numeros",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.03 - Conjuntos.17_in",
+        "description": "01 - Estrutura de dados.03 - Conjuntos.17_in",
+        "peekOfCode": "numeros = {1, 2, 3, 1, 2, 4, 5, 5, 6, 7, 8, 9, 0}\nprint(1 in numeros)  # True\nprint(10 in numeros)  # False",
+        "detail": "01 - Estrutura de dados.03 - Conjuntos.17_in",
+        "documentation": {}
+    },
+    {
+        "label": "pessoa",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "description": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "peekOfCode": "pessoa = {\"nome\": \"Guilherme\", \"idade\": 28}\nprint(pessoa)\npessoa = dict(nome=\"Guilherme\", idade=28)\nprint(pessoa)\npessoa[\"telefone\"] = \"3333-1234\"  # {\"nome\": \"Guilherme\", \"idade\": 28, \"telefone\": \"3333-1234\"}\nprint(pessoa)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "documentation": {}
+    },
+    {
+        "label": "pessoa",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "description": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "peekOfCode": "pessoa = dict(nome=\"Guilherme\", idade=28)\nprint(pessoa)\npessoa[\"telefone\"] = \"3333-1234\"  # {\"nome\": \"Guilherme\", \"idade\": 28, \"telefone\": \"3333-1234\"}\nprint(pessoa)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "documentation": {}
+    },
+    {
+        "label": "pessoa[\"telefone\"]",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "description": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "peekOfCode": "pessoa[\"telefone\"] = \"3333-1234\"  # {\"nome\": \"Guilherme\", \"idade\": 28, \"telefone\": \"3333-1234\"}\nprint(pessoa)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.00_declarando_dicionarios",
+        "documentation": {}
+    },
+    {
+        "label": "dados",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "peekOfCode": "dados = {\"nome\": \"Guilherme\", \"idade\": 28, \"telefone\": \"3333-1234\"}\nprint(dados[\"nome\"])  # \"Guilherme\"\nprint(dados[\"idade\"])  # 28\nprint(dados[\"telefone\"])  # \"3333-1234\"\ndados[\"nome\"] = \"Maria\"\ndados[\"idade\"] = 18\ndados[\"telefone\"] = \"9988-1781\"\nprint(dados)  # {\"nome\": \"Maria\", \"idade\": 18, \"telefone\": \"9988-1781\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "dados[\"nome\"]",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "peekOfCode": "dados[\"nome\"] = \"Maria\"\ndados[\"idade\"] = 18\ndados[\"telefone\"] = \"9988-1781\"\nprint(dados)  # {\"nome\": \"Maria\", \"idade\": 18, \"telefone\": \"9988-1781\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "dados[\"idade\"]",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "peekOfCode": "dados[\"idade\"] = 18\ndados[\"telefone\"] = \"9988-1781\"\nprint(dados)  # {\"nome\": \"Maria\", \"idade\": 18, \"telefone\": \"9988-1781\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "dados[\"telefone\"]",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "peekOfCode": "dados[\"telefone\"] = \"9988-1781\"\nprint(dados)  # {\"nome\": \"Maria\", \"idade\": 18, \"telefone\": \"9988-1781\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.01_acessando_dados",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\ntelefone = contatos[\"giovanna@gmail.com\"][\"telefone\"]  # \"3443-2121\"\nprint(telefone)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "documentation": {}
+    },
+    {
+        "label": "telefone",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "description": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "peekOfCode": "telefone = contatos[\"giovanna@gmail.com\"][\"telefone\"]  # \"3443-2121\"\nprint(telefone)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.02_dicionarios_aninhados",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.03_iterando_dicionarios",
+        "description": "01 - Estrutura de dados.04 - Dicionários.03_iterando_dicionarios",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\nfor chave in contatos:\n    print(chave, contatos[chave])\nprint(\"=\" * 100)\nfor chave, valor in contatos.items():",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.03_iterando_dicionarios",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.04_clear",
+        "description": "01 - Estrutura de dados.04 - Dicionários.04_clear",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\ncontatos.clear()\nprint(contatos)  # {}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.04_clear",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "description": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\ncopia = contatos.copy()\ncopia[\"guilherme@gmail.com\"] = {\"nome\": \"Gui\"}\nprint(contatos[\"guilherme@gmail.com\"])  # {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(copia[\"guilherme@gmail.com\"])  # {\"nome\": \"Gui\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "documentation": {}
+    },
+    {
+        "label": "copia",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "description": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "peekOfCode": "copia = contatos.copy()\ncopia[\"guilherme@gmail.com\"] = {\"nome\": \"Gui\"}\nprint(contatos[\"guilherme@gmail.com\"])  # {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(copia[\"guilherme@gmail.com\"])  # {\"nome\": \"Gui\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "documentation": {}
+    },
+    {
+        "label": "copia[\"guilherme@gmail.com\"]",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "description": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "peekOfCode": "copia[\"guilherme@gmail.com\"] = {\"nome\": \"Gui\"}\nprint(contatos[\"guilherme@gmail.com\"])  # {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(copia[\"guilherme@gmail.com\"])  # {\"nome\": \"Gui\"}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.05_copy",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "description": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "peekOfCode": "resultado = dict.fromkeys([\"nome\", \"telefone\"])  # {\"nome\": None, \"telefone\": None}\nprint(resultado)\nresultado = dict.fromkeys([\"nome\", \"telefone\"], \"vazio\")  # {\"nome\": \"vazio\", \"telefone\": \"vazio\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "description": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "peekOfCode": "resultado = dict.fromkeys([\"nome\", \"telefone\"], \"vazio\")  # {\"nome\": \"vazio\", \"telefone\": \"vazio\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.06_fromkeys",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "description": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\n# contatos[\"chave\"]  # KeyError\nresultado = contatos.get(\"chave\")  # None\nprint(resultado)\nresultado = contatos.get(\"chave\", {})  # {}\nprint(resultado)\nresultado = contatos.get(\n    \"guilherme@gmail.com\", {}\n)  # {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "description": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "peekOfCode": "resultado = contatos.get(\"chave\")  # None\nprint(resultado)\nresultado = contatos.get(\"chave\", {})  # {}\nprint(resultado)\nresultado = contatos.get(\n    \"guilherme@gmail.com\", {}\n)  # {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "description": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "peekOfCode": "resultado = contatos.get(\"chave\", {})  # {}\nprint(resultado)\nresultado = contatos.get(\n    \"guilherme@gmail.com\", {}\n)  # {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "description": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "peekOfCode": "resultado = contatos.get(\n    \"guilherme@gmail.com\", {}\n)  # {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.07_get",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "description": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\nresultado = contatos.items()  # dict_items([('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})])\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "description": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "peekOfCode": "resultado = contatos.items()  # dict_items([('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})])\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.08_items",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "description": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\nresultado = contatos.keys()  # dict_keys(['guilherme@gmail.com'])\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "description": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "peekOfCode": "resultado = contatos.keys()  # dict_keys(['guilherme@gmail.com'])\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.09_keys",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "description": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\nresultado = contatos.pop(\"guilherme@gmail.com\")  # {'nome': 'Guilherme', 'telefone': '3333-2221'}\nprint(resultado)\nresultado = contatos.pop(\"guilherme@gmail.com\", {})  # {}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "description": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "peekOfCode": "resultado = contatos.pop(\"guilherme@gmail.com\")  # {'nome': 'Guilherme', 'telefone': '3333-2221'}\nprint(resultado)\nresultado = contatos.pop(\"guilherme@gmail.com\", {})  # {}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "description": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "peekOfCode": "resultado = contatos.pop(\"guilherme@gmail.com\", {})  # {}\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.10_pop",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "description": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\nresultado = contatos.popitem()  # ('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})\nprint(resultado)\n# contatos.popitem()  # KeyError",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "description": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "peekOfCode": "resultado = contatos.popitem()  # ('guilherme@gmail.com', {'nome': 'Guilherme', 'telefone': '3333-2221'})\nprint(resultado)\n# contatos.popitem()  # KeyError",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.11_popitem",
+        "documentation": {}
+    },
+    {
+        "label": "contato",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.12_setdefault",
+        "description": "01 - Estrutura de dados.04 - Dicionários.12_setdefault",
+        "peekOfCode": "contato = {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}\ncontato.setdefault(\"nome\", \"Giovanna\")  # \"Guilherme\"\nprint(contato)  # {'nome': 'Guilherme', 'telefone': '3333-2221'}\ncontato.setdefault(\"idade\", 28)  # 28\nprint(contato)  # {'nome': 'Guilherme', 'telefone': '3333-2221', 'idade': 28}",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.12_setdefault",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.13_update",
+        "description": "01 - Estrutura de dados.04 - Dicionários.13_update",
+        "peekOfCode": "contatos = {\"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"}}\ncontatos.update({\"guilherme@gmail.com\": {\"nome\": \"Gui\"}})\nprint(contatos)  # {'guilherme@gmail.com': {'nome': 'Gui'}}\ncontatos.update({\"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3322-8181\"}})\n# {'guilherme@gmail.com': {'nome': 'Gui'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3322-8181'}}\nprint(contatos)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.13_update",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "description": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\nresultado = (\n    contatos.values()\n)  # dict_values([{'nome': 'Guilherme', 'telefone': '3333-2221'}, {'nome': 'Giovanna', 'telefone': '3443-2121'}, {'nome': 'Chappie', 'telefone': '3344-9871'}, {'nome': 'Melaine', 'telefone': '3333-7766'}])  # noqa\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "description": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "peekOfCode": "resultado = (\n    contatos.values()\n)  # dict_values([{'nome': 'Guilherme', 'telefone': '3333-2221'}, {'nome': 'Giovanna', 'telefone': '3443-2121'}, {'nome': 'Chappie', 'telefone': '3344-9871'}, {'nome': 'Melaine', 'telefone': '3333-7766'}])  # noqa\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.14_values",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "description": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\nresultado = \"guilherme@gmail.com\" in contatos  # True\nprint(resultado)\nresultado = \"megui@gmail.com\" in contatos  # False\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "description": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "peekOfCode": "resultado = \"guilherme@gmail.com\" in contatos  # True\nprint(resultado)\nresultado = \"megui@gmail.com\" in contatos  # False\nprint(resultado)\nresultado = \"idade\" in contatos[\"guilherme@gmail.com\"]  # False\nprint(resultado)\nresultado = \"telefone\" in contatos[\"giovanna@gmail.com\"]  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "description": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "peekOfCode": "resultado = \"megui@gmail.com\" in contatos  # False\nprint(resultado)\nresultado = \"idade\" in contatos[\"guilherme@gmail.com\"]  # False\nprint(resultado)\nresultado = \"telefone\" in contatos[\"giovanna@gmail.com\"]  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "description": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "peekOfCode": "resultado = \"idade\" in contatos[\"guilherme@gmail.com\"]  # False\nprint(resultado)\nresultado = \"telefone\" in contatos[\"giovanna@gmail.com\"]  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "documentation": {}
+    },
+    {
+        "label": "resultado",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "description": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "peekOfCode": "resultado = \"telefone\" in contatos[\"giovanna@gmail.com\"]  # True\nprint(resultado)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.15_in",
+        "documentation": {}
+    },
+    {
+        "label": "contatos",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.04 - Dicionários.16_del",
+        "description": "01 - Estrutura de dados.04 - Dicionários.16_del",
+        "peekOfCode": "contatos = {\n    \"guilherme@gmail.com\": {\"nome\": \"Guilherme\", \"telefone\": \"3333-2221\"},\n    \"giovanna@gmail.com\": {\"nome\": \"Giovanna\", \"telefone\": \"3443-2121\"},\n    \"chappie@gmail.com\": {\"nome\": \"Chappie\", \"telefone\": \"3344-9871\"},\n    \"melaine@gmail.com\": {\"nome\": \"Melaine\", \"telefone\": \"3333-7766\"},\n}\ndel contatos[\"guilherme@gmail.com\"][\"telefone\"]\ndel contatos[\"chappie@gmail.com\"]\n# {'guilherme@gmail.com': {'nome': 'Guilherme'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3443-2121'}, 'melaine@gmail.com': {'nome': 'Melaine', 'telefone': '3333-7766'}}  # noqa\nprint(contatos)",
+        "detail": "01 - Estrutura de dados.04 - Dicionários.16_del",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_mensagem",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "description": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "peekOfCode": "def exibir_mensagem():\n    print(\"Olá mundo!\")\ndef exibir_mensagem_2(nome):\n    print(f\"Seja bem vindo {nome}!\")\ndef exibir_mensagem_3(nome=\"Anônimo\"):\n    print(f\"Seja bem vindo {nome}!\")\nexibir_mensagem()\nexibir_mensagem_2(nome=\"Guilherme\")\nexibir_mensagem_3()\nexibir_mensagem_3(nome=\"Chappie\")",
+        "detail": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_mensagem_2",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "description": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "peekOfCode": "def exibir_mensagem_2(nome):\n    print(f\"Seja bem vindo {nome}!\")\ndef exibir_mensagem_3(nome=\"Anônimo\"):\n    print(f\"Seja bem vindo {nome}!\")\nexibir_mensagem()\nexibir_mensagem_2(nome=\"Guilherme\")\nexibir_mensagem_3()\nexibir_mensagem_3(nome=\"Chappie\")",
+        "detail": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_mensagem_3",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "description": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "peekOfCode": "def exibir_mensagem_3(nome=\"Anônimo\"):\n    print(f\"Seja bem vindo {nome}!\")\nexibir_mensagem()\nexibir_mensagem_2(nome=\"Guilherme\")\nexibir_mensagem_3()\nexibir_mensagem_3(nome=\"Chappie\")",
+        "detail": "01 - Estrutura de dados.05 - Funções.00_primeira_funcao",
+        "documentation": {}
+    },
+    {
+        "label": "calcular_total",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "description": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "peekOfCode": "def calcular_total(numeros):\n    return sum(numeros)\ndef retorna_antecessor_e_sucessor(numero):\n    antecessor = numero - 1\n    sucessor = numero + 1\n    return antecessor, sucessor\nprint(calcular_total([10, 20, 34]))  # 64\nprint(retorna_antecessor_e_sucessor(10))  # (9, 11)",
+        "detail": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "documentation": {}
+    },
+    {
+        "label": "retorna_antecessor_e_sucessor",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "description": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "peekOfCode": "def retorna_antecessor_e_sucessor(numero):\n    antecessor = numero - 1\n    sucessor = numero + 1\n    return antecessor, sucessor\nprint(calcular_total([10, 20, 34]))  # 64\nprint(retorna_antecessor_e_sucessor(10))  # (9, 11)",
+        "detail": "01 - Estrutura de dados.05 - Funções.01_retorno_da_funcao",
+        "documentation": {}
+    },
+    {
+        "label": "salvar_carro",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.02_argumentos_nomeados",
+        "description": "01 - Estrutura de dados.05 - Funções.02_argumentos_nomeados",
+        "peekOfCode": "def salvar_carro(marca, modelo, ano, placa):\n    # salva carro no banco de dados...\n    print(f\"Carro inserido com sucesso! {marca}/{modelo}/{ano}/{placa}\")\nsalvar_carro(\"Fiat\", \"Palio\", 1999, \"ABC-1234\")\nsalvar_carro(marca=\"Fiat\", modelo=\"Palio\", ano=1999, placa=\"ABC-1234\")\nsalvar_carro(**{\"marca\": \"Fiat\", \"modelo\": \"Palio\", \"ano\": 1999, \"placa\": \"ABC-1234\"})",
+        "detail": "01 - Estrutura de dados.05 - Funções.02_argumentos_nomeados",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_poema",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.03_args_kwargs",
+        "description": "01 - Estrutura de dados.05 - Funções.03_args_kwargs",
+        "peekOfCode": "def exibir_poema(data_extenso, *args, **kwargs):\n    texto = \"\\n\".join(args)\n    meta_dados = \"\\n\".join([f\"{chave.title()}: {valor}\" for chave, valor in kwargs.items()])\n    mensagem = f\"{data_extenso}\\n\\n{texto}\\n\\n{meta_dados}\"\n    print(mensagem)\nexibir_poema(\n    \"Zen of Python\",\n    \"Beautiful is better than ugly.\",\n    \"Explicit is better than implicit.\",\n    \"Simple is better than complex.\",",
+        "detail": "01 - Estrutura de dados.05 - Funções.03_args_kwargs",
+        "documentation": {}
+    },
+    {
+        "label": "criar_carro",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.04_parametros_somente_por_posicao copy",
+        "description": "01 - Estrutura de dados.05 - Funções.04_parametros_somente_por_posicao copy",
+        "peekOfCode": "def criar_carro(modelo, ano, placa, /, marca, motor, combustivel):\n    print(modelo, ano, placa, marca, motor, combustivel)\ncriar_carro(\"Palio\", 1999, \"ABC-1234\", marca=\"Fiat\", motor=\"1.0\", combustivel=\"Gasolina\")\ncriar_carro(modelo=\"Palio\", ano=1999, placa=\"ABC-1234\", marca=\"Fiat\", motor=\"1.0\", combustivel=\"Gasolina\")  # inválido",
+        "detail": "01 - Estrutura de dados.05 - Funções.04_parametros_somente_por_posicao copy",
+        "documentation": {}
+    },
+    {
+        "label": "criar_carro",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.05_parametros_somente_por_nome",
+        "description": "01 - Estrutura de dados.05 - Funções.05_parametros_somente_por_nome",
+        "peekOfCode": "def criar_carro(modelo, ano, placa, /, *, marca, motor, combustivel):\n    print(modelo, ano, placa, marca, motor, combustivel)\n# criar_carro(\"Palio\", 1999, \"ABC-1234\", marca=\"Fiat\", motor=\"1.0\", combustivel=\"Gasolina\")\ncriar_carro(modelo=\"Palio\", ano=1999, placa=\"ABC-1234\", marca=\"Fiat\", motor=\"1.0\", combustivel=\"Gasolina\")  # inválido",
+        "detail": "01 - Estrutura de dados.05 - Funções.05_parametros_somente_por_nome",
+        "documentation": {}
+    },
+    {
+        "label": "somar",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "description": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "peekOfCode": "def somar(a, b):\n    return a + b\ndef exibir_resultado(a, b, funcao):\n    resultado = funcao(a, b)\n    print(f\"O resultado da operação {a} + {b} = {resultado}\")\nexibir_resultado(10, 10, somar)  # O resultado da operação 10 + 10 = 20",
+        "detail": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_resultado",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "description": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "peekOfCode": "def exibir_resultado(a, b, funcao):\n    resultado = funcao(a, b)\n    print(f\"O resultado da operação {a} + {b} = {resultado}\")\nexibir_resultado(10, 10, somar)  # O resultado da operação 10 + 10 = 20",
+        "detail": "01 - Estrutura de dados.05 - Funções.06_objetos_de_primeira_classe",
+        "documentation": {}
+    },
+    {
+        "label": "salario_bonus",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "description": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "peekOfCode": "def salario_bonus(bonus):\n    global salario\n    salario += bonus\n    return salario\nsalario_bonus(500)  # 2500",
+        "detail": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "documentation": {}
+    },
+    {
+        "label": "salario",
+        "kind": 5,
+        "importPath": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "description": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "peekOfCode": "salario = 2000\ndef salario_bonus(bonus):\n    global salario\n    salario += bonus\n    return salario\nsalario_bonus(500)  # 2500",
+        "detail": "01 - Estrutura de dados.05 - Funções.07_escopo_local_e_global",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def menu():\n    menu = \"\"\"\\n\n    ================ MENU ================\n    [d]\\tDepositar\n    [s]\\tSacar\n    [e]\\tExtrato\n    [nc]\\tNova conta\n    [lc]\\tListar contas\n    [nu]\\tNovo usuário\n    [q]\\tSair",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "depositar",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def depositar(saldo, valor, extrato, /):\n    if valor > 0:\n        saldo += valor\n        extrato += f\"Depósito:\\tR$ {valor:.2f}\\n\"\n        print(\"\\n=== Depósito realizado com sucesso! ===\")\n    else:\n        print(\"\\n@@@ Operação falhou! O valor informado é inválido. @@@\")\n    return saldo, extrato\ndef sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):\n    excedeu_saldo = valor > saldo",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "sacar",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):\n    excedeu_saldo = valor > saldo\n    excedeu_limite = valor > limite\n    excedeu_saques = numero_saques >= limite_saques\n    if excedeu_saldo:\n        print(\"\\n@@@ Operação falhou! Você não tem saldo suficiente. @@@\")\n    elif excedeu_limite:\n        print(\"\\n@@@ Operação falhou! O valor do saque excede o limite. @@@\")\n    elif excedeu_saques:\n        print(\"\\n@@@ Operação falhou! Número máximo de saques excedido. @@@\")",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_extrato",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def exibir_extrato(saldo, /, *, extrato):\n    print(\"\\n================ EXTRATO ================\")\n    print(\"Não foram realizadas movimentações.\" if not extrato else extrato)\n    print(f\"\\nSaldo:\\t\\tR$ {saldo:.2f}\")\n    print(\"==========================================\")\ndef criar_usuario(usuarios):\n    cpf = input(\"Informe o CPF (somente número): \")\n    usuario = filtrar_usuario(cpf, usuarios)\n    if usuario:\n        print(\"\\n@@@ Já existe usuário com esse CPF! @@@\")",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "criar_usuario",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def criar_usuario(usuarios):\n    cpf = input(\"Informe o CPF (somente número): \")\n    usuario = filtrar_usuario(cpf, usuarios)\n    if usuario:\n        print(\"\\n@@@ Já existe usuário com esse CPF! @@@\")\n        return\n    nome = input(\"Informe o nome completo: \")\n    data_nascimento = input(\"Informe a data de nascimento (dd-mm-aaaa): \")\n    endereco = input(\"Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): \")\n    usuarios.append({\"nome\": nome, \"data_nascimento\": data_nascimento, \"cpf\": cpf, \"endereco\": endereco})",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "filtrar_usuario",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def filtrar_usuario(cpf, usuarios):\n    usuarios_filtrados = [usuario for usuario in usuarios if usuario[\"cpf\"] == cpf]\n    return usuarios_filtrados[0] if usuarios_filtrados else None\ndef criar_conta(agencia, numero_conta, usuarios):\n    cpf = input(\"Informe o CPF do usuário: \")\n    usuario = filtrar_usuario(cpf, usuarios)\n    if usuario:\n        print(\"\\n=== Conta criada com sucesso! ===\")\n        return {\"agencia\": agencia, \"numero_conta\": numero_conta, \"usuario\": usuario}\n    print(\"\\n@@@ Usuário não encontrado, fluxo de criação de conta encerrado! @@@\")",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "criar_conta",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def criar_conta(agencia, numero_conta, usuarios):\n    cpf = input(\"Informe o CPF do usuário: \")\n    usuario = filtrar_usuario(cpf, usuarios)\n    if usuario:\n        print(\"\\n=== Conta criada com sucesso! ===\")\n        return {\"agencia\": agencia, \"numero_conta\": numero_conta, \"usuario\": usuario}\n    print(\"\\n@@@ Usuário não encontrado, fluxo de criação de conta encerrado! @@@\")\ndef listar_contas(contas):\n    for conta in contas:\n        linha = f\"\"\"\\",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "listar_contas",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def listar_contas(contas):\n    for conta in contas:\n        linha = f\"\"\"\\\n            Agência:\\t{conta['agencia']}\n            C/C:\\t\\t{conta['numero_conta']}\n            Titular:\\t{conta['usuario']['nome']}\n        \"\"\"\n        print(\"=\" * 100)\n        print(textwrap.dedent(linha))\ndef main():",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "01 - Estrutura de dados.desafio",
+        "description": "01 - Estrutura de dados.desafio",
+        "peekOfCode": "def main():\n    LIMITE_SAQUES = 3\n    AGENCIA = \"0001\"\n    saldo = 0\n    limite = 500\n    extrato = \"\"\n    numero_saques = 0\n    usuarios = []\n    contas = []\n    while True:",
+        "detail": "01 - Estrutura de dados.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Bicicleta",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "description": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "peekOfCode": "class Bicicleta:\n    def __init__(self, cor, modelo, ano, valor):\n        self.cor = cor\n        self.modelo = modelo\n        self.ano = ano\n        self.valor = valor\n    def buzinar(self):\n        print(\"Plim plim...\")\n    def parar(self):\n        print(\"Parando bicicleta...\")",
+        "detail": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "documentation": {}
+    },
+    {
+        "label": "b1",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "description": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "peekOfCode": "b1 = Bicicleta(\"vermelha\", \"caloi\", 2022, 600)\nb1.buzinar()\nb1.correr()\nb1.parar()\nprint(b1.cor, b1.modelo, b1.ano, b1.valor)\nb2 = Bicicleta(\"verde\", \"monark\", 2000, 189)\nprint(b2)\nb2.correr()",
+        "detail": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "documentation": {}
+    },
+    {
+        "label": "b2",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "description": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "peekOfCode": "b2 = Bicicleta(\"verde\", \"monark\", 2000, 189)\nprint(b2)\nb2.correr()",
+        "detail": "02 - Programação Orientada a Objetos.02 - Classes e Objetos.01_desafio_bicicletaria",
+        "documentation": {}
+    },
+    {
+        "label": "Cachorro",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "description": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "peekOfCode": "class Cachorro:\n    def __init__(self, nome, cor, acordado=True):\n        print(\"Inicializando a classe...\")\n        self.nome = nome\n        self.cor = cor\n        self.acordado = acordado\n    def __del__(self):\n        print(\"Removendo a instância da classe.\")\n    def falar(self):\n        print(\"auau\")",
+        "detail": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "documentation": {}
+    },
+    {
+        "label": "criar_cachorro",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "description": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "peekOfCode": "def criar_cachorro():\n    c = Cachorro(\"Zeus\", \"Branco e preto\", False)\n    print(c.nome)\nc = Cachorro(\"Chappie\", \"amarelo\")\nc.falar()\nprint(\"Ola mundo\")\ndel c\nprint(\"Ola mundo\")\nprint(\"Ola mundo\")\nprint(\"Ola mundo\")",
+        "detail": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "documentation": {}
+    },
+    {
+        "label": "c",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "description": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "peekOfCode": "c = Cachorro(\"Chappie\", \"amarelo\")\nc.falar()\nprint(\"Ola mundo\")\ndel c\nprint(\"Ola mundo\")\nprint(\"Ola mundo\")\nprint(\"Ola mundo\")\n# criar_cachorro()",
+        "detail": "02 - Programação Orientada a Objetos.03 - Construtores e destrutores.01_construtores_destrutores",
+        "documentation": {}
+    },
+    {
+        "label": "Veiculo",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "class Veiculo:\n    def __init__(self, cor, placa, numero_rodas):\n        self.cor = cor\n        self.placa = placa\n        self.numero_rodas = numero_rodas\n    def ligar_motor(self):\n        print(\"Ligando o motor\")\n    def __str__(self):\n        return f\"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}\"\nclass Motocicleta(Veiculo):",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "Motocicleta",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "class Motocicleta(Veiculo):\n    pass\nclass Carro(Veiculo):\n    pass\nclass Caminhao(Veiculo):\n    def __init__(self, cor, placa, numero_rodas, carregado):\n        super().__init__(cor, placa, numero_rodas)\n        self.carregado = carregado\n    def esta_carregado(self):\n        print(f\"{'Sim' if self.carregado else 'Não'} estou carregado\")",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "Carro",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "class Carro(Veiculo):\n    pass\nclass Caminhao(Veiculo):\n    def __init__(self, cor, placa, numero_rodas, carregado):\n        super().__init__(cor, placa, numero_rodas)\n        self.carregado = carregado\n    def esta_carregado(self):\n        print(f\"{'Sim' if self.carregado else 'Não'} estou carregado\")\nmoto = Motocicleta(\"preta\", \"abc-1234\", 2)\ncarro = Carro(\"branco\", \"xde-0098\", 4)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "Caminhao",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "class Caminhao(Veiculo):\n    def __init__(self, cor, placa, numero_rodas, carregado):\n        super().__init__(cor, placa, numero_rodas)\n        self.carregado = carregado\n    def esta_carregado(self):\n        print(f\"{'Sim' if self.carregado else 'Não'} estou carregado\")\nmoto = Motocicleta(\"preta\", \"abc-1234\", 2)\ncarro = Carro(\"branco\", \"xde-0098\", 4)\ncaminhao = Caminhao(\"roxo\", \"gfd-8712\", 8, True)\nprint(moto)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "moto",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "moto = Motocicleta(\"preta\", \"abc-1234\", 2)\ncarro = Carro(\"branco\", \"xde-0098\", 4)\ncaminhao = Caminhao(\"roxo\", \"gfd-8712\", 8, True)\nprint(moto)\nprint(carro)\nprint(caminhao)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "carro",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "carro = Carro(\"branco\", \"xde-0098\", 4)\ncaminhao = Caminhao(\"roxo\", \"gfd-8712\", 8, True)\nprint(moto)\nprint(carro)\nprint(caminhao)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "caminhao",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "peekOfCode": "caminhao = Caminhao(\"roxo\", \"gfd-8712\", 8, True)\nprint(moto)\nprint(carro)\nprint(caminhao)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.01_heranca_simples",
+        "documentation": {}
+    },
+    {
+        "label": "Animal",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "class Animal:\n    def __init__(self, nro_patas):\n        self.nro_patas = nro_patas\n    def __str__(self):\n        return f\"{self.__class__.__name__}: {', '.join([f'{chave}={valor}' for chave, valor in self.__dict__.items()])}\"\nclass Mamifero(Animal):\n    def __init__(self, cor_pelo, **kw):\n        self.cor_pelo = cor_pelo\n        super().__init__(**kw)\nclass Ave(Animal):",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "Mamifero",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "class Mamifero(Animal):\n    def __init__(self, cor_pelo, **kw):\n        self.cor_pelo = cor_pelo\n        super().__init__(**kw)\nclass Ave(Animal):\n    def __init__(self, cor_bico, **kw):\n        self.cor_bico = cor_bico\n        super().__init__(**kw)\nclass Gato(Mamifero):\n    pass",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "Ave",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "class Ave(Animal):\n    def __init__(self, cor_bico, **kw):\n        self.cor_bico = cor_bico\n        super().__init__(**kw)\nclass Gato(Mamifero):\n    pass\nclass Ornitorrinco(Mamifero, Ave):\n    def __init__(self, cor_bico, cor_pelo, nro_patas):\n        super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)\ngato = Gato(nro_patas=4, cor_pelo=\"Preto\")",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "Gato",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "class Gato(Mamifero):\n    pass\nclass Ornitorrinco(Mamifero, Ave):\n    def __init__(self, cor_bico, cor_pelo, nro_patas):\n        super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)\ngato = Gato(nro_patas=4, cor_pelo=\"Preto\")\nprint(gato)\nornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo=\"vermelho\", cor_bico=\"laranja\")\nprint(ornitorrinco)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "Ornitorrinco",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "class Ornitorrinco(Mamifero, Ave):\n    def __init__(self, cor_bico, cor_pelo, nro_patas):\n        super().__init__(cor_pelo=cor_pelo, cor_bico=cor_bico, nro_patas=nro_patas)\ngato = Gato(nro_patas=4, cor_pelo=\"Preto\")\nprint(gato)\nornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo=\"vermelho\", cor_bico=\"laranja\")\nprint(ornitorrinco)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "gato",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "gato = Gato(nro_patas=4, cor_pelo=\"Preto\")\nprint(gato)\nornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo=\"vermelho\", cor_bico=\"laranja\")\nprint(ornitorrinco)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "ornitorrinco",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "description": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "peekOfCode": "ornitorrinco = Ornitorrinco(nro_patas=2, cor_pelo=\"vermelho\", cor_bico=\"laranja\")\nprint(ornitorrinco)",
+        "detail": "02 - Programação Orientada a Objetos.04 - Herança.02_heranca_multipla",
+        "documentation": {}
+    },
+    {
+        "label": "Conta",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "peekOfCode": "class Conta:\n    def __init__(self, nro_agencia, saldo=0):\n        self._saldo = saldo\n        self.nro_agencia = nro_agencia\n    def depositar(self, valor):\n        # ...\n        self._saldo += valor\n    def sacar(self, valor):\n        # ...\n        self._saldo -= valor",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "documentation": {}
+    },
+    {
+        "label": "conta",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "peekOfCode": "conta = Conta(\"0001\", 100)\nconta.depositar(100)\nprint(conta.nro_agencia)\nprint(conta.mostrar_saldo())",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.01_encapsulamento",
+        "documentation": {}
+    },
+    {
+        "label": "Foo",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "peekOfCode": "class Foo:\n    def __init__(self, x=None):\n        self._x = x\n    @property\n    def x(self):\n        return self._x or 0\n    @x.setter\n    def x(self, value):\n        self._x += value\n    @x.deleter",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "documentation": {}
+    },
+    {
+        "label": "foo",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "peekOfCode": "foo = Foo(10)\nprint(foo.x)\ndel foo.x\nprint(foo.x)\nfoo.x = 10\nprint(foo.x)",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "documentation": {}
+    },
+    {
+        "label": "foo.x",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "peekOfCode": "foo.x = 10\nprint(foo.x)",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.02_propriedades_exemplo_foo",
+        "documentation": {}
+    },
+    {
+        "label": "Pessoa",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "peekOfCode": "class Pessoa:\n    def __init__(self, nome, ano_nascimento):\n        self.nome = nome\n        self._ano_nascimento = ano_nascimento\n    @property\n    def idade(self):\n        _ano_atual = 2022\n        return _ano_atual - self._ano_nascimento\npessoa = Pessoa(\"Guilherme\", 1994)\nprint(f\"Nome: {pessoa.nome} \\tIdade: {pessoa.idade}\")",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "documentation": {}
+    },
+    {
+        "label": "pessoa",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "description": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "peekOfCode": "pessoa = Pessoa(\"Guilherme\", 1994)\nprint(f\"Nome: {pessoa.nome} \\tIdade: {pessoa.idade}\")",
+        "detail": "02 - Programação Orientada a Objetos.05 - Encapsulamento.03_propriedades_exemplo_pessoa",
+        "documentation": {}
+    },
+    {
+        "label": "Passaro",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "description": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "peekOfCode": "class Passaro:\n    def voar(self):\n        print(\"Voando...\")\nclass Pardal(Passaro):\n    def voar(self):\n        print(\"Pardal pode voar\")\nclass Avestruz(Passaro):\n    def voar(self):\n        print(\"Avestruz não pode voar\")\n# NOTE: exemplo ruim do uso de herança para \"ganhar\" o método voar",
+        "detail": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "documentation": {}
+    },
+    {
+        "label": "Pardal",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "description": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "peekOfCode": "class Pardal(Passaro):\n    def voar(self):\n        print(\"Pardal pode voar\")\nclass Avestruz(Passaro):\n    def voar(self):\n        print(\"Avestruz não pode voar\")\n# NOTE: exemplo ruim do uso de herança para \"ganhar\" o método voar\nclass Aviao(Passaro):\n    def voar(self):\n        print(\"Avião está decolando...\")",
+        "detail": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "documentation": {}
+    },
+    {
+        "label": "Avestruz",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "description": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "peekOfCode": "class Avestruz(Passaro):\n    def voar(self):\n        print(\"Avestruz não pode voar\")\n# NOTE: exemplo ruim do uso de herança para \"ganhar\" o método voar\nclass Aviao(Passaro):\n    def voar(self):\n        print(\"Avião está decolando...\")\ndef plano_voo(obj):\n    obj.voar()\nplano_voo(Pardal())",
+        "detail": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "documentation": {}
+    },
+    {
+        "label": "Aviao",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "description": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "peekOfCode": "class Aviao(Passaro):\n    def voar(self):\n        print(\"Avião está decolando...\")\ndef plano_voo(obj):\n    obj.voar()\nplano_voo(Pardal())\nplano_voo(Avestruz())\nplano_voo(Aviao())",
+        "detail": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "documentation": {}
+    },
+    {
+        "label": "plano_voo",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "description": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "peekOfCode": "def plano_voo(obj):\n    obj.voar()\nplano_voo(Pardal())\nplano_voo(Avestruz())\nplano_voo(Aviao())",
+        "detail": "02 - Programação Orientada a Objetos.06 - Polimorfismo.01_polimorfismo",
+        "documentation": {}
+    },
+    {
+        "label": "Estudante",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "class Estudante:\n    escola = \"DIO\"\n    def __init__(self, nome, matricula):\n        self.nome = nome\n        self.matricula = matricula\n    def __str__(self) -> str:\n        return f\"{self.nome} - {self.matricula} - {self.escola}\"\ndef mostrar_valores(*objs):\n    for obj in objs:\n        print(obj)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "mostrar_valores",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "def mostrar_valores(*objs):\n    for obj in objs:\n        print(obj)\naluno_1 = Estudante(\"Guilherme\", 1)\naluno_2 = Estudante(\"Giovanna\", 2)\nmostrar_valores(aluno_1, aluno_2)\nEstudante.escola = \"Python\"\naluno_3 = Estudante(\"Chappie\", 3)\nmostrar_valores(aluno_1, aluno_2, aluno_3)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "aluno_1",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "aluno_1 = Estudante(\"Guilherme\", 1)\naluno_2 = Estudante(\"Giovanna\", 2)\nmostrar_valores(aluno_1, aluno_2)\nEstudante.escola = \"Python\"\naluno_3 = Estudante(\"Chappie\", 3)\nmostrar_valores(aluno_1, aluno_2, aluno_3)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "aluno_2",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "aluno_2 = Estudante(\"Giovanna\", 2)\nmostrar_valores(aluno_1, aluno_2)\nEstudante.escola = \"Python\"\naluno_3 = Estudante(\"Chappie\", 3)\nmostrar_valores(aluno_1, aluno_2, aluno_3)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "Estudante.escola",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "Estudante.escola = \"Python\"\naluno_3 = Estudante(\"Chappie\", 3)\nmostrar_valores(aluno_1, aluno_2, aluno_3)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "aluno_3",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "description": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "peekOfCode": "aluno_3 = Estudante(\"Chappie\", 3)\nmostrar_valores(aluno_1, aluno_2, aluno_3)",
+        "detail": "02 - Programação Orientada a Objetos.07 - Atributos de classe ou instância.01_atributos_classe_instancia",
+        "documentation": {}
+    },
+    {
+        "label": "Pessoa",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "description": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "peekOfCode": "class Pessoa:\n    def __init__(self, nome, idade):\n        self.nome = nome\n        self.idade = idade\n    @classmethod\n    def criar_de_data_nascimento(cls, ano, mes, dia, nome):\n        idade = 2022 - ano\n        return cls(nome, idade)\n    @staticmethod\n    def e_maior_idade(idade):",
+        "detail": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "documentation": {}
+    },
+    {
+        "label": "p",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "description": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "peekOfCode": "p = Pessoa.criar_de_data_nascimento(1994, 3, 21, \"Guilherme\")\nprint(p.nome, p.idade)\nprint(Pessoa.e_maior_idade(18))\nprint(Pessoa.e_maior_idade(8))",
+        "detail": "02 - Programação Orientada a Objetos.08 - Métodos de classe e métodos estáticos.01_metodos_classe_estatico",
+        "documentation": {}
+    },
+    {
+        "label": "ControleRemoto",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "description": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "peekOfCode": "class ControleRemoto(ABC):\n    @abstractmethod\n    def ligar(self):\n        pass\n    @abstractmethod\n    def desligar(self):\n        pass\n    @property\n    @abstractproperty\n    def marca(self):",
+        "detail": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "documentation": {}
+    },
+    {
+        "label": "ControleTV",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "description": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "peekOfCode": "class ControleTV(ControleRemoto):\n    def ligar(self):\n        print(\"Ligando a TV...\")\n        print(\"Ligada!\")\n    def desligar(self):\n        print(\"Desligando a TV...\")\n        print(\"Desligada!\")\n    @property\n    def marca(self):\n        return \"Philco\"",
+        "detail": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "documentation": {}
+    },
+    {
+        "label": "ControleArCondicionado",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "description": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "peekOfCode": "class ControleArCondicionado(ControleRemoto):\n    def ligar(self):\n        print(\"Ligando o Ar Condicionado...\")\n        print(\"Ligado!\")\n    def desligar(self):\n        print(\"Desligando o Ar Condicionado...\")\n        print(\"Desligado!\")\n    @property\n    def marca(self):\n        return \"LG\"",
+        "detail": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "documentation": {}
+    },
+    {
+        "label": "controle",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "description": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "peekOfCode": "controle = ControleTV()\ncontrole.ligar()\ncontrole.desligar()\nprint(controle.marca)\ncontrole = ControleArCondicionado()\ncontrole.ligar()\ncontrole.desligar()\nprint(controle.marca)",
+        "detail": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "documentation": {}
+    },
+    {
+        "label": "controle",
+        "kind": 5,
+        "importPath": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "description": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "peekOfCode": "controle = ControleArCondicionado()\ncontrole.ligar()\ncontrole.desligar()\nprint(controle.marca)",
+        "detail": "02 - Programação Orientada a Objetos.09 - Classes abstratas.01_classe_abstrata",
+        "documentation": {}
+    },
+    {
+        "label": "Cliente",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Cliente:\n    def __init__(self, endereco):\n        self.endereco = endereco\n        self.contas = []\n    def realizar_transacao(self, conta, transacao):\n        transacao.registrar(conta)\n    def adicionar_conta(self, conta):\n        self.contas.append(conta)\nclass PessoaFisica(Cliente):\n    def __init__(self, nome, data_nascimento, cpf, endereco):",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "PessoaFisica",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class PessoaFisica(Cliente):\n    def __init__(self, nome, data_nascimento, cpf, endereco):\n        super().__init__(endereco)\n        self.nome = nome\n        self.data_nascimento = data_nascimento\n        self.cpf = cpf\nclass Conta:\n    def __init__(self, numero, cliente):\n        self._saldo = 0\n        self._numero = numero",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Conta",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Conta:\n    def __init__(self, numero, cliente):\n        self._saldo = 0\n        self._numero = numero\n        self._agencia = \"0001\"\n        self._cliente = cliente\n        self._historico = Historico()\n    @classmethod\n    def nova_conta(cls, cliente, numero):\n        return cls(numero, cliente)",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "ContaCorrente",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class ContaCorrente(Conta):\n    def __init__(self, numero, cliente, limite=500, limite_saques=3):\n        super().__init__(numero, cliente)\n        self._limite = limite\n        self._limite_saques = limite_saques\n    def sacar(self, valor):\n        numero_saques = len(\n            [transacao for transacao in self.historico.transacoes if transacao[\"tipo\"] == Saque.__name__]\n        )\n        excedeu_limite = valor > self._limite",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Historico",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Historico:\n    def __init__(self):\n        self._transacoes = []\n    @property\n    def transacoes(self):\n        return self._transacoes\n    def adicionar_transacao(self, transacao):\n        self._transacoes.append(\n            {\n                \"tipo\": transacao.__class__.__name__,",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Transacao",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Transacao(ABC):\n    @property\n    @abstractproperty\n    def valor(self):\n        pass\n    @abstractclassmethod\n    def registrar(self, conta):\n        pass\nclass Saque(Transacao):\n    def __init__(self, valor):",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Saque",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Saque(Transacao):\n    def __init__(self, valor):\n        self._valor = valor\n    @property\n    def valor(self):\n        return self._valor\n    def registrar(self, conta):\n        sucesso_transacao = conta.sacar(self.valor)\n        if sucesso_transacao:\n            conta.historico.adicionar_transacao(self)",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "Deposito",
+        "kind": 6,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "class Deposito(Transacao):\n    def __init__(self, valor):\n        self._valor = valor\n    @property\n    def valor(self):\n        return self._valor\n    def registrar(self, conta):\n        sucesso_transacao = conta.depositar(self.valor)\n        if sucesso_transacao:\n            conta.historico.adicionar_transacao(self)",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "menu",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def menu():\n    menu = \"\"\"\\n\n    ================ MENU ================\n    [d]\\tDepositar\n    [s]\\tSacar\n    [e]\\tExtrato\n    [nc]\\tNova conta\n    [lc]\\tListar contas\n    [nu]\\tNovo usuário\n    [q]\\tSair",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "filtrar_cliente",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def filtrar_cliente(cpf, clientes):\n    clientes_filtrados = [cliente for cliente in clientes if cliente.cpf == cpf]\n    return clientes_filtrados[0] if clientes_filtrados else None\ndef recuperar_conta_cliente(cliente):\n    if not cliente.contas:\n        print(\"\\n@@@ Cliente não possui conta! @@@\")\n        return\n    # FIXME: não permite cliente escolher a conta\n    return cliente.contas[0]\ndef depositar(clientes):",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "recuperar_conta_cliente",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def recuperar_conta_cliente(cliente):\n    if not cliente.contas:\n        print(\"\\n@@@ Cliente não possui conta! @@@\")\n        return\n    # FIXME: não permite cliente escolher a conta\n    return cliente.contas[0]\ndef depositar(clientes):\n    cpf = input(\"Informe o CPF do cliente: \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if not cliente:",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "depositar",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def depositar(clientes):\n    cpf = input(\"Informe o CPF do cliente: \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if not cliente:\n        print(\"\\n@@@ Cliente não encontrado! @@@\")\n        return\n    valor = float(input(\"Informe o valor do depósito: \"))\n    transacao = Deposito(valor)\n    conta = recuperar_conta_cliente(cliente)\n    if not conta:",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "sacar",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def sacar(clientes):\n    cpf = input(\"Informe o CPF do cliente: \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if not cliente:\n        print(\"\\n@@@ Cliente não encontrado! @@@\")\n        return\n    valor = float(input(\"Informe o valor do saque: \"))\n    transacao = Saque(valor)\n    conta = recuperar_conta_cliente(cliente)\n    if not conta:",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "exibir_extrato",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def exibir_extrato(clientes):\n    cpf = input(\"Informe o CPF do cliente: \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if not cliente:\n        print(\"\\n@@@ Cliente não encontrado! @@@\")\n        return\n    conta = recuperar_conta_cliente(cliente)\n    if not conta:\n        return\n    print(\"\\n================ EXTRATO ================\")",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "criar_cliente",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def criar_cliente(clientes):\n    cpf = input(\"Informe o CPF (somente número): \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if cliente:\n        print(\"\\n@@@ Já existe cliente com esse CPF! @@@\")\n        return\n    nome = input(\"Informe o nome completo: \")\n    data_nascimento = input(\"Informe a data de nascimento (dd-mm-aaaa): \")\n    endereco = input(\"Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): \")\n    cliente = PessoaFisica(nome=nome, data_nascimento=data_nascimento, cpf=cpf, endereco=endereco)",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "criar_conta",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def criar_conta(numero_conta, clientes, contas):\n    cpf = input(\"Informe o CPF do cliente: \")\n    cliente = filtrar_cliente(cpf, clientes)\n    if not cliente:\n        print(\"\\n@@@ Cliente não encontrado, fluxo de criação de conta encerrado! @@@\")\n        return\n    conta = ContaCorrente.nova_conta(cliente=cliente, numero=numero_conta)\n    contas.append(conta)\n    cliente.contas.append(conta)\n    print(\"\\n=== Conta criada com sucesso! ===\")",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "listar_contas",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def listar_contas(contas):\n    for conta in contas:\n        print(\"=\" * 100)\n        print(textwrap.dedent(str(conta)))\ndef main():\n    clientes = []\n    contas = []\n    while True:\n        opcao = menu()\n        if opcao == \"d\":",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "description": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "peekOfCode": "def main():\n    clientes = []\n    contas = []\n    while True:\n        opcao = menu()\n        if opcao == \"d\":\n            depositar(clientes)\n        elif opcao == \"s\":\n            sacar(clientes)\n        elif opcao == \"e\":",
+        "detail": "02 - Programação Orientada a Objetos.10 - desafio.desafio",
+        "documentation": {}
+    }
+]
