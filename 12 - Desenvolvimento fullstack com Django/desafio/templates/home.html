@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <p><a href="{% url 'cards:view_requests' %}">Minhas solicitações</a></p>
+    <p>Olá {{ user.username }}!</p>
+    <form action="{% url 'logout' %}" method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-secondary">Sair</button>
+    </form>
+  {% else %}
+    <p>Você não está logado</p>
+    <a href="{% url 'login' %}" class="btn btn-primary">Entrar</a>
+  {% endif %}
+{% endblock %}
