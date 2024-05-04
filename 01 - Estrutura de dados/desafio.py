@@ -109,9 +109,9 @@ def listar_contas(contas):
 def main():
     AGENCIA = "0001"
     ########### Abaixo alguns usuários e contas já criados
-    usuarios = {'1': {'nome': 'vinícius', 'data_nascimento': '07/11/1995', 'endereco': 'lucilda minuci, 39'},
-                '2': {'nome': 'exemplo', 'data_nascimento': '01/01/1990', 'endereco': 'vera cruz, 49'},
-                '3': {'nome': 'exemplo2', 'data_nascimento': '01-01-1990', 'endereco': 'rua test'}}
+    usuarios = {'1': {'nome': 'vinícius', 'data_nascimento': '01/01/1990', 'endereco': 'munique reto, 39'},
+                '2': {'nome': 'exemplo', 'data_nascimento': '02/01/1990', 'endereco': 'vera cruz, 49'},
+                '3': {'nome': 'exemplo2', 'data_nascimento': '01-02-1990', 'endereco': 'rua test'}}
     contas = {1: {'agencia': '0001', 'senha': '123', 'usuario': '1', 'limite_numero_saques': 2,
                   'numero_saques': 0, 'saldo': 0, 'limite_saque': 1000.0, 'extrato': ''},
               2: {'agencia': '0001', 'senha': '456', 'usuario': '2', 'limite_numero_saques': 3,
