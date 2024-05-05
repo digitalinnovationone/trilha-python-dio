@@ -224,5 +224,5 @@ def sessaoConta():
             print("Operação inválida, por favor selecione novamente a operação desejada.")
 
 
-## INICIMOS O NOSSO SISTEMA...    
+## INICIAMOS O NOSSO SISTEMA...    
 inicio()
