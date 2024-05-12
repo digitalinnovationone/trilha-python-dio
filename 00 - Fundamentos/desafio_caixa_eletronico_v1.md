@@ -65,7 +65,4 @@ while True:
 
     else:
         print("Operação inválida, por favor selecione novamente a operação desejada.")
-""" 
-Agora, o programa oferece um menu interativo onde o usuário pode escolher entre depositar, sacar, visualizar extrato ou sair do sistema. 
-As operações de depósito e saque foram adaptadas para verificar os limites e condições exigidos, e o extrato agora é exibido adequadamente.
 """
