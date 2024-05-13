@@ -10,4 +10,4 @@ class Pessoa:
 
 
 pessoa = Pessoa("Luis Sousa", 1978)
-print(f"Nome: {pessoa.nome} \tIdade: {pessoa.idade}")
+print(f"Nome: {pessoa.nome} -  Idade: {pessoa.idade}")
