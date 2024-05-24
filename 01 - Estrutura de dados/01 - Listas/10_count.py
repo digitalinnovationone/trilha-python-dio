@@ -1,5 +1,9 @@
-cores = ["vermelho", "azul", "verde", "azul"]
+# Método count()
+# O método count() retorna o número de vezes que um determinado elemento aparece em uma lista.
+# Sintaxe: nome_variavel.count(<dado>)
 
-print(cores.count("vermelho"))  # 1
-print(cores.count("azul"))  # 2
-print(cores.count("verde"))  # 1
+# exemplo 1
+numeros = [1,1,1,1,1,1,1,1,1,1]
+print(numeros)
+print(f'qtd. de repetições do número 1: {numeros.count(1)}')  # 10
+

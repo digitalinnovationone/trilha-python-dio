@@ -1,7 +1,11 @@
-lista = [1, "Python", [40, 30, 20]]
+# Title: Método clear
+# Descrição: O método clear limpa todos os elementos de uma lista
+# Neste exemplo, a lista é limpa e exibida antes e depois da limpeza
 
-print(lista)  # [1, "Python", [40, 30, 20]]
+numeros = list(range(1, 11))
 
-lista.clear()
+print(numeros)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-print(lista)  # []
+numeros.clear()
+
+print(numeros)  # []
