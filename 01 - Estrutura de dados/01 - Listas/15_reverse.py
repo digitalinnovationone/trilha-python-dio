@@ -1,5 +1,10 @@
-linguagens = ["python", "js", "c", "java", "csharp"]
+# Método reverse()
+# O método reverse() inverte a ordem dos elementos de uma lista.
+# Sintaxe: nome_variavel.reverse()
 
-linguagens.reverse()
 
-print(linguagens)  # ["csharp", "java", "c", "js", "python"]
+# exemplo 1
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print('Lista Original:\n' ,numeros)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+numeros.reverse()
+print('Lista no modo Reverso:\n' ,numeros)  # [1, 2, 3, 4, 6, 7, 8, 9, 10]
