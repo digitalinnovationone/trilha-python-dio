@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "12 - desenvolvimento fullstack com django"
+version = "0.1.0"
+description = ""
+authors = ["Guilherme Carvalho <gui.ifsp11@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = { version = "*", extras = ["brotli"] }
+gunicorn = "*"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "*"
+pytest-django = "*"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
