@@ -1,66 +1,62 @@
-menu = """
-
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
-
-=> """
-
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
+limite_diario_saque = 3
+valor_depositado = 1500
+saque = 0
 
 while True:
-
-    opcao = input(menu)
-
-    if opcao == "d":
-        valor = float(input("Informe o valor do depósito: "))
-
-        if valor > 0:
-            saldo += valor
-            extrato += f"Depósito: R$ {valor:.2f}\n"
-
-        else:
-            print("Operação falhou! O valor informado é inválido.")
-
-    elif opcao == "s":
-        valor = float(input("Informe o valor do saque: "))
-
-        excedeu_saldo = valor > saldo
-
-        excedeu_limite = valor > limite
-
-        excedeu_saques = numero_saques >= LIMITE_SAQUES
-
-        if excedeu_saldo:
-            print("Operação falhou! Você não tem saldo suficiente.")
-
-        elif excedeu_limite:
-            print("Operação falhou! O valor do saque excede o limite.")
-
-        elif excedeu_saques:
-            print("Operação falhou! Número máximo de saques excedido.")
-
-        elif valor > 0:
-            saldo -= valor
-            extrato += f"Saque: R$ {valor:.2f}\n"
-            numero_saques += 1
-
-        else:
-            print("Operação falhou! O valor informado é inválido.")
-
-    elif opcao == "e":
-        print("\n================ EXTRATO ================")
-        print("Não foram realizadas movimentações." if not extrato else extrato)
-        print(f"\nSaldo: R$ {saldo:.2f}")
-        print("==========================================")
-
-    elif opcao == "q":
+    print("""\nVocê deseja realizar qual operação?
+    [1]Deposito
+    [2]Saque
+    [3]Extrato
+    [0]Sair
+    """)
+# PARTE DE DEPOSITO
+    user = int(input('Escolha uma opção: '))
+    if user == 1:
+        deposito = int(input('Qual a quantia que você irá inserir: '))
+        valor_depositado += deposito
+        print(f"""\nExtrato:
+        Saldo anterior de R${valor_depositado - deposito:.2f} mais o deposito de R${deposito:.2f}
+        Valor total da conta: R${valor_depositado:.2f} """)
+# PARTE DE SAQUE
+    if user == 2 and limite_diario_saque > 0 and valor_depositado > saque:
+        saque = int(input(f'Qual a quantia que deseja sacar?(limete de R$500,00. Total de saques restantes:{limite_diario_saque}): '))
+        if saque <= 500 and valor_depositado > saque:
+            valor_depositado -= saque
+            limite_diario_saque -= 1
+            print(f"""Extrato:
+                  Saldo anterior de R${valor_depositado + saque}, saque realizado de R${saque:.2f}
+                  Valor total da conta: R${valor_depositado:.2f} """)
+# SE O VALOR FOR MAIOR QUE 500 
+        while saque > 500:
+            print('Inserir um valor menor ou igual a R$500,00')
+            saque = int(input(f'Qual a quantia que deseja sacar?(limete de R$500,00. Total de saques restantes:{limite_diario_saque}): '))
+            valor_depositado -= saque
+            limite_diario_saque -= 1
+            print(f"""Extrato:
+                  Saldo anterior de R${valor_depositado + saque}, saque realizado de R${saque:.2f}
+                  Valor total da conta: R${valor_depositado:.2f} """)
+# SE O VALOR FOR MAIOR QUE SAQUE
+        if saque > valor_depositado and valor_depositado > 0:
+            print(f'Você não possui dinheiro para esse saque, seu saldo é R${valor_depositado}')
+# SE O SALDO FOR ZERO
+        if valor_depositado == 0:
+            print(f'Seu saldo é de R$ {valor_depositado}')
+            print("""\nVocê deseja realizar qual operação?
+                [1]Deposito
+                [3]Extrato
+                [0]Sair
+                """)
+            user = int(input('Escolha uma opção: '))
+# SE O LIMITE DIARIO ACABOU
+    elif user == 2 and limite_diario_saque <= 0 :
+        print('\nSeu limete diario de 3 saques acabou'.center(44, '*'))
+# EXTRATO
+    if user == 3:
+        print(f"""Seu extrado:
+            SALDO:{valor_depositado}
+            LIMITE DE SAQUE:{limite_diario_saque} """)
+# SAIR DO BANCO
+    if user == 0:
+        print("Obrigado por usar o Banco")
         break
-
-    else:
-        print("Operação inválida, por favor selecione novamente a operação desejada.")
+    
