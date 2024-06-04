@@ -1,0 +1,24 @@
+class ContaBancaria:
+    def __init__(self, numero_da_conta):
+        self.numero_da_conta = numero_da_conta
+        self.saldo = 0
+
+    def depositar(self, valor):
+        if valor > 0:
+            self.saldo += valor
+            return True
+        else:
+            return False
+
+    def sacar(self, valor):
+        if valor <= self.saldo:
+            self.saldo -= valor
+            return True
+        else:
+            return False
+
+    def consultar_saldo(self):
+        return self.saldo
+
+    def gerar_extrato(self):
+        return f"Conta: {self.numero_da_conta}, Saldo: {self.saldo}"
