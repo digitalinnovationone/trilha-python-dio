@@ -13,16 +13,16 @@ class Livro:
         return f"{self.__class__.__name__}({', '.join([f'{chave}: {valor}' for chave, valor in self.__dict__.items()])})"
 
 class Livro_1(Livro):
-    def __init__(self, nome, preco, autor, numero_paginas, lido):
-        super().__init__(nome, preco, autor, numero_paginas)
+    def __init__(self, lido, **kw):
+        super().__init__(**kw)
         self.lido = lido
     
     def ja_li(self):
          print(f"{'Sim já' if self.lido else 'Não'} li!")
 
 class Livro_2(Livro):
-    def __init__(self, nome, preco, autor, numero_paginas, lido):
-        super().__init__(nome, preco, autor, numero_paginas)
+    def __init__(self, lido, **kw):
+        super().__init__(**kw)
         self.lido = lido
     
     def ja_li(self):
@@ -30,8 +30,8 @@ class Livro_2(Livro):
 
 
 class Livro_3(Livro):
-    def __init__(self, nome, preco, autor, numero_paginas, lido):
-        super().__init__(nome, preco, autor, numero_paginas)
+    def __init__(self, lido, **kw):
+        super().__init__(**kw)
         self.lido = lido
     
     def ja_li(self):
