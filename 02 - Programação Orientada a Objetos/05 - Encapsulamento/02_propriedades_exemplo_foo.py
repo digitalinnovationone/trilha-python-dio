@@ -2,7 +2,7 @@ class Foo:
     def __init__(self, x=None):
         self._x = x
 
-    @property
+    @property  # transforma um método em um atributo
     def x(self):
         return self._x or 0
 

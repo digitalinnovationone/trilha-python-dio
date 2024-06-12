@@ -1,6 +1,6 @@
 class Conta:
     def __init__(self, nro_agencia, saldo=0):
-        self._saldo = saldo
+        self._saldo = saldo # método privados
         self.nro_agencia = nro_agencia
 
     def depositar(self, valor):
