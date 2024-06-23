@@ -1,0 +1,20 @@
+Services:
+  db:
+    image: mysql:latest
+    container_name: database_drims_db
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: database_drims
+      MYSQL_USER: igor
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: 4321
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - database_drims_network
+
+networks:
+  database_drims_network:
+    driver: bridge
