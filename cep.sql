@@ -1,0 +1,6 @@
+--cep
+
+CREATE TABLE cep (
+    id INT INTO AUTO_INCREMENT PRIMARY KEY,
+    num NUMERIC (10)
+);
