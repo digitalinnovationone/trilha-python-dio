@@ -31,11 +31,7 @@ class ClienteServico:
         telefone = input("Informe seu telefone: ")
 
         return PessoaJuridica(
-            nome_fantasia=nome,
-            cnpj=documento,
-            faturamento_anual=faturamento_anual,
-            email=email,
-            telefone=telefone,
+            nome_fantasia=nome, cnpj=documento, faturamento_anual=faturamento_anual, email=email, telefone=telefone,
             status="ativo",
         )
 
