@@ -207,6 +207,7 @@ def sacar(clientes):
 def exibir_extrato(clientes):
     cpf = input("Informe o CPF: ")
     cliente = filtrar_cliente(cpf, clientes)
+    
     if not cliente:
         print("Cliente não encontrado!")
         return
