@@ -9,7 +9,7 @@ class ControleRemoto(ABC):
     @abstractmethod
     def desligar(self):
         pass
-
+#O @property obriga  para que a def marca seja usada pelas classes filhas
     @property
     @abstractproperty
     def marca(self):
