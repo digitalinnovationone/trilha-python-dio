@@ -28,4 +28,4 @@ print("Ola mundo")
 print("Ola mundo")
 print("Ola mundo")
 
-# criar_cachorro()
+criar_cachorro()

@@ -1,4 +1,5 @@
 class Conta:
+    # convenção - ao usar o _ no inicio de um dado não se pode mexer, se entende que é um codigo privado.
     def __init__(self, nro_agencia, saldo=0):
         self._saldo = saldo
         self.nro_agencia = nro_agencia
