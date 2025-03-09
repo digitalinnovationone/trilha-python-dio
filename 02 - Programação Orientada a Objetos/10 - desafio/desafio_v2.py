@@ -1,7 +1,15 @@
+## Minhas alterações
 import textwrap
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC, abstractmethod
 from datetime import datetime
 
+## Adição de cabeçalho
+def exibir_cabecalho(): 
+    print("=====================================")
+    print("\n      Banco Popular      ")
+    print("\n=====================================")
+    print("\n    Olá! Bem Vindo ao Banco Popular      \n")
+    print("=====================================")
 
 class Cliente:
     def __init__(self, endereco):
@@ -124,23 +132,26 @@ class Historico:
     def transacoes(self):
         return self._transacoes
 
+     ##Alteração para registrar e imprimir a data e hora exatas de cada transação no console
     def adicionar_transacao(self, transacao):
+        data_transacao = datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+        print(f"Transação registrada em: {data_transacao}") 
         self._transacoes.append(
             {
                 "tipo": transacao.__class__.__name__,
                 "valor": transacao.valor,
-                "data": datetime.now().strftime("%d-%m-%Y %H:%M:%s"),
+                "data": data_transacao,
             }
         )
 
 
 class Transacao(ABC):
     @property
-    @abstractproperty
+    @abstractmethod
     def valor(self):
         pass
 
-    @abstractclassmethod
+    @abstractmethod
     def registrar(self, conta):
         pass
 
@@ -174,16 +185,16 @@ class Deposito(Transacao):
         if sucesso_transacao:
             conta.historico.adicionar_transacao(self)
 
-
-def menu():
+ ## Pequena alterção feita no Menu
+def menu(): 
     menu = """\n
-    ================ MENU ================
+    ================ MENU TRANSAÇÕES================ 
     [d]\tDepositar
     [s]\tSacar
     [e]\tExtrato
     [nc]\tNova conta
     [lc]\tListar contas
-    [nu]\tNovo usuário
+    [nu]\tNovo cliente
     [q]\tSair
     => """
     return input(textwrap.dedent(menu))
@@ -198,9 +209,21 @@ def recuperar_conta_cliente(cliente):
     if not cliente.contas:
         print("\n@@@ Cliente não possui conta! @@@")
         return
+    if len(cliente.contas) > 1: ## opção de criar mais de uma conta 
+        print("\nEscolha a conta:")
+        for i, conta in enumerate(cliente.contas, 1):  # Mostra as contas numeradas
+            print(f"{i} - Conta {conta.numero}")
+        escolha = int(input("Digite o número da conta desejada: "))
+        
+        # Verificar se a escolha é válida
+        if 1 <= escolha <= len(cliente.contas):
+            return cliente.contas[escolha - 1]  # Retorna a conta escolhida
+        else:
+            print("\n@@@ Opção inválida! Tente novamente. @@@")
+            return None
 
-    # FIXME: não permite cliente escolher a conta
-    return cliente.contas[0]
+    # Caso tenha apenas uma conta, retorna ela automaticamente
+        return cliente.contas[0]
 
 
 def depositar(clientes):
@@ -251,7 +274,8 @@ def exibir_extrato(clientes):
     if not conta:
         return
 
-    print("\n================ EXTRATO ================")
+  ## Pequena alteração feita
+    print("\n================ EXTRATO DA CONTA ================")
     transacoes = conta.historico.transacoes
 
     extrato = ""
@@ -259,7 +283,7 @@ def exibir_extrato(clientes):
         extrato = "Não foram realizadas movimentações."
     else:
         for transacao in transacoes:
-            extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}"
+            extrato += f"\n{transacao['tipo']}:\n\tR$ {transacao['valor']:.2f}\n\tData: {transacao['data']}"
 
     print(extrato)
     print(f"\nSaldo:\n\tR$ {conta.saldo:.2f}")
@@ -292,8 +316,8 @@ def criar_conta(numero_conta, clientes, contas):
     if not cliente:
         print("\n@@@ Cliente não encontrado, fluxo de criação de conta encerrado! @@@")
         return
-
-    conta = ContaCorrente.nova_conta(cliente=cliente, numero=numero_conta)
+    conta = ContaCorrente(numero=numero_conta, cliente=cliente)
+    #conta = ContaCorrente.nova_conta(cliente=cliente, numero=numero_conta)
     contas.append(conta)
     cliente.contas.append(conta)
 
@@ -310,7 +334,10 @@ def main():
     clientes = []
     contas = []
 
+    exibir_cabecalho()
+
     while True:
+        
         opcao = menu()
 
         if opcao == "d":
@@ -340,3 +367,5 @@ def main():
 
 
 main()
+
+
