@@ -1,66 +1,60 @@
-menu = """
+class ContaBancaria:
+    def __init__(self, titular, saldo_inicial=0):
+        self.titular = titular
+        self.saldo = saldo_inicial
 
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
-
-=> """
-
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
-
-while True:
-
-    opcao = input(menu)
-
-    if opcao == "d":
-        valor = float(input("Informe o valor do depósito: "))
-
+    def depositar(self, valor):
         if valor > 0:
-            saldo += valor
-            extrato += f"Depósito: R$ {valor:.2f}\n"
-
+            self.saldo += valor
+            print(f"Depósito de R${valor:.2f} realizado com sucesso!")
         else:
-            print("Operação falhou! O valor informado é inválido.")
+            print("O valor do depósito deve ser positivo.")
 
-    elif opcao == "s":
-        valor = float(input("Informe o valor do saque: "))
-
-        excedeu_saldo = valor > saldo
-
-        excedeu_limite = valor > limite
-
-        excedeu_saques = numero_saques >= LIMITE_SAQUES
-
-        if excedeu_saldo:
-            print("Operação falhou! Você não tem saldo suficiente.")
-
-        elif excedeu_limite:
-            print("Operação falhou! O valor do saque excede o limite.")
-
-        elif excedeu_saques:
-            print("Operação falhou! Número máximo de saques excedido.")
-
-        elif valor > 0:
-            saldo -= valor
-            extrato += f"Saque: R$ {valor:.2f}\n"
-            numero_saques += 1
-
+    def sacar(self, valor):
+        if valor > 0:
+            if valor <= self.saldo:
+                self.saldo -= valor
+                print(f"Saque de R${valor:.2f} realizado com sucesso!")
+                self.exibir_saldo()  # Exibe o saldo após o saque
+            else:
+                print("Saldo insuficiente para saque.")
         else:
-            print("Operação falhou! O valor informado é inválido.")
+            print("O valor do saque deve ser positivo.")
 
-    elif opcao == "e":
-        print("\n================ EXTRATO ================")
-        print("Não foram realizadas movimentações." if not extrato else extrato)
-        print(f"\nSaldo: R$ {saldo:.2f}")
-        print("==========================================")
+    def exibir_saldo(self):
+        print(f"Saldo atual: R${self.saldo:.2f}")
 
-    elif opcao == "q":
-        break
+# Função para menu de opções
+def menu():
+    print("\n--- Sistema Bancário ---")
+    print("1. Depositar")
+    print("2. Sacar")
+    print("3. Exibir Saldo")
+    print("4. Sair")
 
-    else:
-        print("Operação inválida, por favor selecione novamente a operação desejada.")
+# Função principal para interação com o usuário
+def sistema_bancario():
+    nome = input("Digite o nome do titular da conta: ")
+    conta = ContaBancaria(nome)
+
+    while True:
+        menu()
+        opcao = input("Escolha uma opção: ")
+
+        if opcao == "1":
+            valor = float(input("Digite o valor a ser depositado: R$"))
+            conta.depositar(valor)
+        elif opcao == "2":
+            valor = float(input("Digite o valor a ser sacado: R$"))
+            conta.sacar(valor)
+        elif opcao == "3":
+            conta.exibir_saldo()
+        elif opcao == "4":
+            print("Saindo do sistema...")
+            break
+        else:
+            print("Opção inválida. Tente novamente.")
+
+# Chama o sistema bancário
+sistema_bancario()
+
