@@ -5,7 +5,7 @@ class Pessoa:
 
     @classmethod
     def criar_de_data_nascimento(cls, ano, mes, dia, nome):
-        idade = 2022 - ano
+        idade = 2025 - ano
         return cls(nome, idade)
 
     @staticmethod
