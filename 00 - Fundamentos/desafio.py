@@ -1,9 +1,9 @@
 menu = """
 
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
+[1] Depositar
+[2] Sacar
+[3] Extrato
+[0] Sair
 
 => """
 
@@ -17,49 +17,51 @@ while True:
 
     opcao = input(menu)
 
-    if opcao == "d":
+    if opcao == "1":
         valor = float(input("Informe o valor do depósito: "))
 
         if valor > 0:
             saldo += valor
             extrato += f"Depósito: R$ {valor:.2f}\n"
+            print("Depósito realizado com sucesso.")
 
         else:
             print("Operação falhou! O valor informado é inválido.")
 
-    elif opcao == "s":
+    elif opcao == "2":
         valor = float(input("Informe o valor do saque: "))
 
-        excedeu_saldo = valor > saldo
+        saldo_insuficiente = valor > saldo
 
-        excedeu_limite = valor > limite
+        limite_valor_saque = valor > limite
 
-        excedeu_saques = numero_saques >= LIMITE_SAQUES
+        limite_numero_saque = numero_saques >= LIMITE_SAQUES
 
-        if excedeu_saldo:
+        if saldo_insuficiente:
             print("Operação falhou! Você não tem saldo suficiente.")
 
-        elif excedeu_limite:
-            print("Operação falhou! O valor do saque excede o limite.")
+        elif limite_valor_saque:
+            print("Operação falhou! valor diário de saque excedeu o limite.")
 
-        elif excedeu_saques:
-            print("Operação falhou! Número máximo de saques excedido.")
+        elif limite_numero_saque:
+            print("Operação falhou! Atingiu número máximo diário de saques.")
 
         elif valor > 0:
             saldo -= valor
             extrato += f"Saque: R$ {valor:.2f}\n"
             numero_saques += 1
+            print("Saque realizado com sucesso.")
 
         else:
             print("Operação falhou! O valor informado é inválido.")
 
-    elif opcao == "e":
-        print("\n================ EXTRATO ================")
+    elif opcao == "3":
+        print("\n EXTRATO")
         print("Não foram realizadas movimentações." if not extrato else extrato)
         print(f"\nSaldo: R$ {saldo:.2f}")
-        print("==========================================")
 
-    elif opcao == "q":
+    elif opcao == "0":
+        print("Saindo do sistema. Obrigado por utilizar nosso sistema.")
         break
 
     else:
