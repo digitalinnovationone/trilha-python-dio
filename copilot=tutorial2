@@ -1,0 +1,6 @@
+**Resumo das etapas para criar um Copilot personalizado 
+1. **Criar um Copilot em branco:** Inicie criando um novo projeto no Microsoft Copilot Studio configurando o básico para o seu copiloto 
+2. **Customizar um tópico:** Defina tópicos de conversa específicos, configurando gatilhos e o fluxo de diálogo para interações personalizadas 
+3. **Personalizar mensagem de erro de tópico:** Ajuste as mensagens que o copiloto exibe quando não compreende a pergunta para melhorar a experiência do usuário 
+4. **Aumentar/diminuir a qualidade da resposta com Generative AI:
+** Utilize os recursos de IA generativa para refinar e otimizar as respostas do copiloto ajustando a qualidade das interações conforme necessário
