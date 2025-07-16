@@ -1,0 +1,15 @@
+# Ignorar arquivos e pastas de cache do Python
+__pycache__/
+*/__pycache__/
+
+# Ignorar arquivos temporários e de plano de ação
+plano_acao.tmp.md
+
+# Ignorar arquivos PDF de material de apoio
+01 - Estrutura de dados/19 - [Dio] Desafio.pptx.pdf
+
+# Ignorar outros arquivos temporários comuns
+*.pyc
+*.pyo
+*.swp
+*.swo
