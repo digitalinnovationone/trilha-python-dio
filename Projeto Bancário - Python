@@ -1,0 +1,49 @@
+
+menu = ("""
+---------- Olá, bem-vindo. Escolha sua opção: ----------
+      1 - Depositar
+      2 - Sacar
+      3 - Extrato
+      4 - Sair
+--------------------------------------------------------           
+""")
+
+
+extrato = ""
+saldo = 0
+qntd_saque = 3
+
+while True:
+
+    opcao = input(f"{menu} Digite uma opção: ")
+
+    if opcao == "1":
+        valor_deposito = float(input("Digite o valor a ser depositado: "))
+        print(f"Depósito de R${valor_deposito} efetuado com sucesso.")
+        extrato += f"Depósito de R${valor_deposito:.2f}\n"
+        saldo += valor_deposito
+
+    elif opcao == "2":
+        qntd_sacar = float(input("Digite o valor a ser sacado: "))
+        
+        if qntd_sacar < saldo:
+            if qntd_sacar <= 500:
+                print(f"Saque no valor de R${qntd_sacar} efetuado com sucesso.")
+                extrato += f"Saque de R${qntd_sacar:.2f}\n"
+                saldo -= qntd_sacar
+            else:
+                print("Valor excede seu limite máximo por saque.")
+        else:
+            print("Você não possui este saldo para sacar.")
+
+    elif opcao == "3":
+        print("------------------------------")
+        print(f"Extrato: \n{extrato}")
+        print(f"Saldo: {saldo:.2f}")
+        print("------------------------------")
+
+    elif opcao == "4":
+        break
+    
+    else:
+        print("Opção inválida.")
