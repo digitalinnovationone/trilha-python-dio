@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2 class="my-4">Detalhes da Solicitação do Cartão</h2>
+<div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ card.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">**** **** **** {{ card.number|slice:"12:" }}</h6>
+    <p class="card-text">{{ card.holder_name }}</p>
+    <span class="badge text-bg-{%if card.network == 'M'%}danger{% else %}primary{%endif%}">{{ card.get_network_display }}</span>
+    <span class="badge text-bg-{%if card.status == 'P'%}secondary{%endif%}{%if card.status == 'A'%}dark{%endif%}{%if card.status == 'E'%}info{%endif%}{%if card.status == 'R'%}success{%endif%}">{{ card.get_status_display }}</span>
+  </div>
+</div>
+<a class="d-block mt-4" href="{% url 'cards:view_requests' %}">Voltar às solicitações</a>
+{% endblock %}

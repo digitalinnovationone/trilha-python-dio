@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "dio-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Guilherme Carvalho <gui.ifsp11@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "*"
+flask-sqlalchemy = "*"
+flask-migrate = "*"
+flask-marshmallow = "*"
+apispec-webframeworks = "*"
+flask-bcrypt = "*"
+marshmallow-sqlalchemy = "*"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
