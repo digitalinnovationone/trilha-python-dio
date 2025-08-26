@@ -8,5 +8,7 @@ contatos = {
 del contatos["guilherme@gmail.com"]["telefone"]
 del contatos["chappie@gmail.com"]
 
-# {'guilherme@gmail.com': {'nome': 'Guilherme'}, 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3443-2121'}, 'melaine@gmail.com': {'nome': 'Melaine', 'telefone': '3333-7766'}}  # noqa
+# {'guilherme@gmail.com': {'nome': 'Guilherme'}, 
+# 'giovanna@gmail.com': {'nome': 'Giovanna', 'telefone': '3443-2121'}, 
+# 'melaine@gmail.com': {'nome': 'Melaine', 'telefone': '3333-7766'}}  # noqa
 print(contatos)

@@ -1,3 +1,3 @@
-linguagens = ["python", "js", "c", "java", "csharp"]
+linguagens = ["python", "js", "c", "java", "csharp", "c++"]
 
-print(len(linguagens))  # 5
+print(len(linguagens))  # 6

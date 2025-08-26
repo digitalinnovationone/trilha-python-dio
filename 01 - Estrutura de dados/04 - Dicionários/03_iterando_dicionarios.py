@@ -5,10 +5,13 @@ contatos = {
     "melaine@gmail.com": {"nome": "Melaine", "telefone": "3333-7766"},
 }
 
+print("=" * 70)
 for chave in contatos:
     print(chave, contatos[chave])
 
-print("=" * 100)
+print("=" * 70)
+# Iterando sobre as chaves e valores do dicionário
 
 for chave, valor in contatos.items():
     print(chave, valor)
+print("=" * 70)

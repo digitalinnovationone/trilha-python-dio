@@ -5,7 +5,7 @@ contatos = {"guilherme@gmail.com": {"nome": "Guilherme", "telefone": "3333-2221"
 resultado = contatos.get("chave")  # None
 print(resultado)
 
-resultado = contatos.get("chave", {})  # {}
+resultado = contatos.get("chave", {"Não há a chave no dicionario"})  # {"Não há a chave no dicionario"}
 print(resultado)
 
 resultado = contatos.get(

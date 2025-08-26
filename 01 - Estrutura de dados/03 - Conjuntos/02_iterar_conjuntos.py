@@ -1,4 +1,4 @@
-carros = {"gol", "celta", "palio"}
+carros = {"gol", "celta", "gol", "palio"}
 
 for carro in carros:
     print(carro)

@@ -6,6 +6,7 @@ ROOT_PATH = Path(__file__).parent
 
 os.mkdir(ROOT_PATH / "novo-diretorio")
 
+
 arquivo = open(ROOT_PATH / "novo.txt", "w")
 arquivo.close()
 

@@ -1,8 +1,8 @@
-carros = ["gol", "celta", "palio"]
+carros = ["gol", "celta", "palio", "verona", "civic", "corolla", "hb20"]
 
 for carro in carros:
     print(carro)
 
 
-for indice, carro in enumerate(carros):
-    print(f"{indice}: {carro}")
+for numera, carro in enumerate(carros):
+    print(f"{numera}: {carro}")

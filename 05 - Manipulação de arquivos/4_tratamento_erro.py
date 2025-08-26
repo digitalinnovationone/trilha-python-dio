@@ -18,5 +18,5 @@ except Exception as exc:
 
 # try:
 #     arquivo = open(ROOT_PATH / "novo-diretorio")
-# except IsADirectoryError as exc:
+#except IsADirectoryError as exc:
 #     print(f"Não foi possível abrir o arquivo: {exc}")
