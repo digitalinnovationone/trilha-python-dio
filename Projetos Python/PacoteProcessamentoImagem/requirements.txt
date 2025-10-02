@@ -1,0 +1,2 @@
+pillow
+numpy
