@@ -1,15 +1,15 @@
 def meu_decorador(funcao):
-    def envelope():
+    def envelope(*args, **kwargs):
         print("faz algo antes de executar")
-        funcao()
+        funcao(*args, *kwargs)
         print("faz algo depois de executar")
 
     return envelope
 
 
 @meu_decorador
-def ola_mundo():
-    print("Olá mundo!")
+def ola_mundo(nome):
+    print(f"Olá mundo {nome}!")
 
 
-ola_mundo()
+ola_mundo("Mazza")
