@@ -1,0 +1,5 @@
+<form action="{% url 'contacts:get_name' %}" method="post" novalidate>
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>

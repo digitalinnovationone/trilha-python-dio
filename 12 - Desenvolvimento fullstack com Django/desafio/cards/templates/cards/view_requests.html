@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<p>
+  <a href="{% url 'home' %}">Início</a> |
+  <a href="{% url 'cards:request_card' %}">Solicitar cartão</a>
+</p>
+<h2 class="my-4">Minhas Solicitações de Cartão</h2>
+{% if user_requests %}
+  <div class="list-group">
+    {% for request in user_requests %}
+    <a href="{% url 'cards:card_details' request.id %}" class="list-group-item list-group-item-action">
+      Solicitação feita em: {{ request.created_at }} - Status: {{ request.get_status_display }}
+    </a>
+    {% endfor %}
+  </div>
+{% else %}
+  <p>Você não tem solicitações de cartão.</p>
+{% endif %}
+{% endblock %}
