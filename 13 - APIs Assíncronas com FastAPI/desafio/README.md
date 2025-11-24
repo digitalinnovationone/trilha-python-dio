@@ -1,22 +1,25 @@
-# Desafio: API Bancária Assíncrona com FastAPI
+# FastAPI Banking (Assíncrono)
 
-Neste desafio, você irá projetar e implementar uma API RESTful assíncrona usando FastAPI para gerenciar operações bancárias de depósitos e saques, vinculadas a contas correntes. Este desafio irá lhe proporcionar a experiência de construir uma aplicação backend moderna e eficiente que utiliza autenticação JWT e práticas recomendadas de design de APIs.
 
-## Objetivos e Funcionalidades
+API RESTful assíncrona para operações bancárias (depósitos/saques) com autenticação JWT.
 
-O objetivo deste desafio é desenvolver uma API com as seguintes funcionalidades:
 
-- **Cadastro de Transações:** Permita o cadastro de transações bancárias, como depósitos e saques.
-- **Exibição de Extrato:** Implemente um endpoint para exibir o extrato de uma conta, mostrando todas as transações realizadas.
-- **Autenticação com JWT:** Utilize JWT (JSON Web Tokens) para garantir que apenas usuários autenticados possam acessar os endpoints que exigem autenticação.
+## Funcionalidades
 
-## Requisitos Técnicos
 
-Para a realização deste desafio, você deve atender aos seguintes requisitos técnicos:
+- Cadastro de transações (depósito/saque)
+- Extrato por conta
+- Autenticação com JWT
+- Validações: valores negativos e saldo para saque
+- Documentação automática via OpenAPI/Swagger
 
-- **FastAPI:** Utilize FastAPI como framework para criar sua API. Aproveite os recursos assíncronos do framework para lidar com operações de I/O de forma eficiente.
-- **Modelagem de Dados:** Crie modelos de dados adequados para representar contas correntes e transações. Garanta que as transações estão relacionadas a uma conta corrente, e que contas possam ter múltiplas transações.
-- **Validação das operações:** Não permita depósitos e saques com valores negativos, valide se o usuário possui saldo para realizar o saque.
-- **Segurança:** Implemente autenticação usando JWT para proteger os endpoints que necessitam de acesso autenticado.
-- **Documentação com OpenAPI:**  Certifique-se de que sua API esteja bem documentada, incluindo descrições adequad
-as para cada endpoint, parâmetros e modelos de dados.
+
+## Como rodar (local)
+
+
+1. Copie `.env.example` para `.env` e ajuste as variáveis.
+2. Instale dependências (usando poetry):
+
+
+```bash
+poetry install --no-root --without dev
