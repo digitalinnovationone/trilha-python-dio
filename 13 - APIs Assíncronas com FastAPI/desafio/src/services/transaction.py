@@ -1,30 +1,34 @@
 from databases.interfaces import Record
-
 from src.database import database
 from src.exceptions import AccountNotFoundError, BusinessError
 from src.models.account import accounts
 from src.models.transaction import TransactionType, transactions
 from src.schemas.transaction import TransactionIn
-
+from typing import List, Optional
 
 class TransactionService:
-    async def read_all(self, account_id: int, limit: int, skip: int = 0) -> list[Record]:
+    async def read_all(self, account_id: int, limit: int, skip: int = 0) -> List[Record]:
         query = transactions.select().where(transactions.c.account_id == account_id).limit(limit).offset(skip)
         return await database.fetch_all(query)
 
     @database.transaction()
-    async def create(self, transaction: TransactionIn) -> Record:
+    async def create(self, transaction: TransactionIn, user_id: Optional[int] = None) -> Record:
+        # buscar conta
         query = accounts.select().where(accounts.c.id == transaction.account_id)
         account = await database.fetch_one(query)
         if not account:
             raise AccountNotFoundError
 
+        # ownership check
+        if user_id is not None and account["user_id"] != user_id:
+            raise AccountNotFoundError  # ou 403 se preferires
+
         if transaction.type == TransactionType.WITHDRAWAL:
-            balance = float(account.balance) - transaction.amount
+            balance = float(account["balance"]) - transaction.amount
             if balance < 0:
                 raise BusinessError("Operation not carried out due to lack of balance")
         else:
-            balance = float(account.balance) + transaction.amount
+            balance = float(account["balance"]) + transaction.amount
 
         # Create transaction entry
         transaction_id = await self.__register_transaction(transaction)
