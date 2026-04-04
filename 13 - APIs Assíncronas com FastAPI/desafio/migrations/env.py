@@ -1,44 +1,41 @@
 from logging.config import fileConfig
 
 from alembic import context
+from sqlalchemy import create_engine
 
 from src.config import settings
+from src.database import metadata
+import src.models.account  # noqa: F401
+import src.models.transaction  # noqa: F401
 
-# this is the Alembic Config object, which provides
-# access to the values within the .ini file in use.
+# Alembic Config object, which provides access to the values
+# within the .ini file in use.
 config = context.config
+config.set_main_option("sqlalchemy.url", settings.database_url)
 
 # Interpret the config file for Python logging.
-# This line sets up loggers basically.
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
-
-
-from src.database import engine, metadata  # noqa
-from src.models.transaction import transactions  # noqa
-from src.models.account import accounts  # noqa
 
 target_metadata = metadata
 
 
+def get_context_config() -> dict:
+    return {
+        "target_metadata": target_metadata,
+        "compare_type": True,
+        "compare_server_default": True,
+        "render_as_batch": settings.database_url.startswith("sqlite"),
+    }
+
+
 def run_migrations_offline() -> None:
-    """Run migrations in 'offline' mode.
-
-    This configures the context with just a URL
-    and not an Engine, though an Engine is acceptable
-    here as well.  By skipping the Engine creation
-    we don't even need a DBAPI to be available.
-
-    Calls to context.execute() here emit the given string to the
-    script output.
-
-    """
-    url = settings.database_url
+    """Run migrations in 'offline' mode."""
     context.configure(
-        url=url,
-        target_metadata=target_metadata,
+        url=settings.database_url,
         literal_binds=True,
         dialect_opts={"paramstyle": "named"},
+        **get_context_config(),
     )
 
     with context.begin_transaction():
@@ -46,16 +43,11 @@ def run_migrations_offline() -> None:
 
 
 def run_migrations_online() -> None:
-    """Run migrations in 'online' mode.
-
-    In this scenario we need to create an Engine
-    and associate a connection with the context.
-
-    """
-    connectable = engine
+    """Run migrations in 'online' mode."""
+    connectable = create_engine(settings.database_url)
 
     with connectable.connect() as connection:
-        context.configure(connection=connection, target_metadata=target_metadata)
+        context.configure(connection=connection, **get_context_config())
 
         with context.begin_transaction():
             context.run_migrations()
