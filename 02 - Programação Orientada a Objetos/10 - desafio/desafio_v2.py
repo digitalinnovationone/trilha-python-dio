@@ -1,5 +1,5 @@
 import textwrap
-from abc import ABC, abstractclassmethod, abstractproperty
+from abc import ABC, abstractcmethod
 from datetime import datetime
 
 
@@ -16,24 +16,26 @@ class Cliente:
 
 
 class PessoaFisica(Cliente):
-    def __init__(self, nome, data_nascimento, cpf, endereco):
+    def __init__(self, nome, data_nascimento, cpf, endereco, nome_mae=None):
         super().__init__(endereco)
         self.nome = nome
         self.data_nascimento = data_nascimento
         self.cpf = cpf
+        self.nome_mae = nome_mae
 
 
 class Conta:
-    def __init__(self, numero, cliente):
+    def __init__(self, numero, cliente, senha):
         self._saldo = 0
         self._numero = numero
         self._agencia = "0001"
         self._cliente = cliente
+        self._senha = senha
         self._historico = Historico()
 
     @classmethod
-    def nova_conta(cls, cliente, numero):
-        return cls(numero, cliente)
+    def nova_conta(cls, cliente, numero, senha):
+        return cls(numero, cliente, senha)
 
     @property
     def saldo(self):
@@ -54,6 +56,10 @@ class Conta:
     @property
     def historico(self):
         return self._historico
+        
+    @property
+    def senha(self):
+        return self._senha
 
     def sacar(self, valor):
         saldo = self.saldo
@@ -68,7 +74,7 @@ class Conta:
             return True
 
         else:
-            print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
+            print("\n@@@ Operação falhou! O valor {valor} informado é inválido. @@@")
 
         return False
 
@@ -77,15 +83,22 @@ class Conta:
             self._saldo += valor
             print("\n=== Depósito realizado com sucesso! ===")
         else:
-            print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
+            print("\n@@@ Operação falhou! O valor {valor} é inválido. @@@")
             return False
 
         return True
 
+def alterar_senha(self, nova_senha):
+        if nova_senha == self._senha:
+            print("\n@@@ Operação falhou! A nova senha deve ser diferente da senha atual. @@@")
+            return False
+        self._senha = nova_senha
+        print("\n=== Senha alterada com sucesso! ===")
+        return True
 
 class ContaCorrente(Conta):
-    def __init__(self, numero, cliente, limite=500, limite_saques=3):
-        super().__init__(numero, cliente)
+    def __init__(self, numero, cliente, senha, limite=500, limite_saques=6):
+        super().__init__(numero, cliente, senha)
         self._limite = limite
         self._limite_saques = limite_saques
 
@@ -98,10 +111,10 @@ class ContaCorrente(Conta):
         excedeu_saques = numero_saques >= self._limite_saques
 
         if excedeu_limite:
-            print("\n@@@ Operação falhou! O valor do saque excede o limite. @@@")
+            print("\n@@@ Operação falhou! O valor do saque excede o limite (R$ {self._limite}). @@@")
 
         elif excedeu_saques:
-            print("\n@@@ Operação falhou! Número máximo de saques excedido. @@@")
+            print("\n@@@ Operação falhou! Número máximo de saques excedido (R$ {self._limite_saques}). @@@")
 
         else:
             return super().sacar(valor)
@@ -113,6 +126,7 @@ class ContaCorrente(Conta):
             Agência:\t{self.agencia}
             C/C:\t\t{self.numero}
             Titular:\t{self.cliente.nome}
+            Nome da mãe:\t{self.cliente.nome_mae}
         """
 
 
@@ -129,18 +143,19 @@ class Historico:
             {
                 "tipo": transacao.__class__.__name__,
                 "valor": transacao.valor,
-                "data": datetime.now().strftime("%d-%m-%Y %H:%M:%s"),
+                "data": datetime.now().strftime("%d-%m-%Y %H:%M:%S"),
             }
         )
 
 
 class Transacao(ABC):
     @property
-    @abstractproperty
+    @abstractmethod
     def valor(self):
         pass
-
-    @abstractclassmethod
+    
+    @classmethod
+    @abstractmethod
     def registrar(self, conta):
         pass
 
@@ -180,10 +195,11 @@ def menu():
     ================ MENU ================
     [d]\tDepositar
     [s]\tSacar
-    [e]\tExtrato
-    [nc]\tNova conta
+    [e]\tVer extrato
+    [nc]\tCriar nova conta
     [lc]\tListar contas
-    [nu]\tNovo usuário
+    [nu]\tCriar novo usuário    
+    [as]\tAlterar senha da conta
     [q]\tSair
     => """
     return input(textwrap.dedent(menu))
@@ -196,11 +212,23 @@ def filtrar_cliente(cpf, clientes):
 
 def recuperar_conta_cliente(cliente):
     if not cliente.contas:
-        print("\n@@@ Cliente não possui conta! @@@")
+        print("\n@@@ Cliente de CPF {cliente.cpf} não possui conta! @@@")
         return
 
     # FIXME: não permite cliente escolher a conta
-    return cliente.contas[0]
+    if len(cliente.contas) == 1:
+        return cliente.contas[0]
+    
+    print(f"\n@@@ Cliente de CPF {cliente.cpf} possui {len(cliente.contas)} conta(s). @@@")
+    for i, conta in enumerate(cliente.contas):
+        print(f"    Índice: {i + 1} - Agência: {conta.agencia}, C/C: {conta.numero}")
+    print("\n@@@ Selecione uma conta para realizar a operação @@@")
+    
+    indice = int(input("Informe o índice da conta: ")) - 1
+    agencia = cliente.contas[indice].agencia
+    numero = cliente.contas[indice].numero
+    print(f"\n@@@ Conta selecionada: Agência {agencia}, C/C {numero} @@@")
+    return cliente.contas[indice]
 
 
 def depositar(clientes):
@@ -236,6 +264,12 @@ def sacar(clientes):
     if not conta:
         return
 
+    print(f"\nInforme a senha da conta {conta.numero} para realizar o saque: ")
+    senha = input()
+    if senha != conta.senha:
+        print(f"\n@@@ Senha incorreta! @@@")
+        return
+        
     cliente.realizar_transacao(conta, transacao)
 
 
@@ -244,11 +278,17 @@ def exibir_extrato(clientes):
     cliente = filtrar_cliente(cpf, clientes)
 
     if not cliente:
-        print("\n@@@ Cliente não encontrado! @@@")
+        print("\n@@@ Cliente de CPF {cpf} não encontrado! @@@")
         return
 
     conta = recuperar_conta_cliente(cliente)
     if not conta:
+        return
+
+    print(f"\nInforme a senha da conta {conta.numero} para visualizar o extrato: ")
+    senha = input()
+    if senha != conta.senha:
+        print(f"\n@@@ Senha incorreta! @@@")
         return
 
     print("\n================ EXTRATO ================")
@@ -277,7 +317,8 @@ def criar_cliente(clientes):
     nome = input("Informe o nome completo: ")
     data_nascimento = input("Informe a data de nascimento (dd-mm-aaaa): ")
     endereco = input("Informe o endereço (logradouro, nro - bairro - cidade/sigla estado): ")
-
+    nome_mae = input("Informe o nome da mãe (opcional): ") or None
+    
     cliente = PessoaFisica(nome=nome, data_nascimento=data_nascimento, cpf=cpf, endereco=endereco)
 
     clientes.append(cliente)
@@ -305,6 +346,26 @@ def listar_contas(contas):
         print("=" * 100)
         print(textwrap.dedent(str(conta)))
 
+def alterar_senha(clientes):
+    cpf = input("Informe o CPF do cliente: ")
+    cliente = filtrar_cliente(cpf, clientes)
+
+    if not cliente:
+        print(f"\n@@@ Cliente de CPF {cpf} não encontrado! @@@")
+        return
+
+    conta = recuperar_conta_cliente(cliente)
+    if not conta:
+        return
+    
+    print(f"\nInforme a senha atual da conta {conta.numero} para alterar a senha: ")
+    senha_atual = input()
+    if senha_atual != conta.senha:
+        print(f"\n@@@ Senha incorreta! @@@")
+        return
+
+    nova_senha = input("Informe a nova senha: ")
+    conta.alterar_senha(nova_senha)
 
 def main():
     clientes = []
@@ -331,7 +392,10 @@ def main():
 
         elif opcao == "lc":
             listar_contas(contas)
-
+            
+        elif opcao == "as":
+            alterar_senha(clientes)
+            
         elif opcao == "q":
             break
 
