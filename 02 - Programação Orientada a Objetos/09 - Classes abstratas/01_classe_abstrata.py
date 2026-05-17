@@ -1,6 +1,5 @@
 from abc import ABC, abstractmethod, abstractproperty
 
-
 class ControleRemoto(ABC):
     @abstractmethod
     def ligar(self):
