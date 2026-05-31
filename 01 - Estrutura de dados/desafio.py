@@ -49,7 +49,7 @@ def sacar(*, saldo, valor, extrato, limite, numero_saques, limite_saques):
     else:
         print("\n@@@ Operação falhou! O valor informado é inválido. @@@")
 
-    return saldo, extrato
+    return saldo, extrato, numero_saques
 
 
 def exibir_extrato(saldo, /, *, extrato):
@@ -60,7 +60,23 @@ def exibir_extrato(saldo, /, *, extrato):
 
 
 def criar_usuario(usuarios):
-    cpf = input("Informe o CPF (somente número): ")
+    # Loop para validação do CPF
+    while True:
+        cpf = input("Informe o CPF (somente 11 números): ").strip()
+        
+        # Verifica se tem letras ou símbolos
+        if not cpf.isdigit():
+            print("\n@@@ Operação falhou! O CPF deve conter apenas números. @@@")
+            continue # Volta para o início do loop
+        
+        # Verifica a quantidade de dígitos
+        if len(cpf) != 11:
+            print("\n@@@ Operação falhou! O CPF deve ter exatamente 11 dígitos. @@@")
+            continue # Volta para o início do loop
+            
+        # Se passou pelas duas verificações, quebra o loop e cntinua
+        break
+
     usuario = filtrar_usuario(cpf, usuarios)
 
     if usuario:
@@ -73,7 +89,7 @@ def criar_usuario(usuarios):
 
     usuarios.append({"nome": nome, "data_nascimento": data_nascimento, "cpf": cpf, "endereco": endereco})
 
-    print("=== Usuário criado com sucesso! ===")
+    print("\n=== Usuário criado com sucesso! ===")
 
 
 def filtrar_usuario(cpf, usuarios):
@@ -87,7 +103,9 @@ def criar_conta(agencia, numero_conta, usuarios):
 
     if usuario:
         print("\n=== Conta criada com sucesso! ===")
+        print(f"\n=== Conta {numero_conta} criada com sucesso para a agência {agencia}! ===")
         return {"agencia": agencia, "numero_conta": numero_conta, "usuario": usuario}
+    
 
     print("\n@@@ Usuário não encontrado, fluxo de criação de conta encerrado! @@@")
 
@@ -118,21 +136,30 @@ def main():
         opcao = menu()
 
         if opcao == "d":
-            valor = float(input("Informe o valor do depósito: "))
+            try:
+                valor = float(input("Informe o valor do depósito: "))
 
-            saldo, extrato = depositar(saldo, valor, extrato)
+                saldo, extrato = depositar(saldo, valor, extrato)
+            except ValueError:
+                print("\n@@@ Operação falhou! Por favor, informe um valor numérico válido. @@@")
+
+
 
         elif opcao == "s":
-            valor = float(input("Informe o valor do saque: "))
+            try:
+                valor = float(input("Informe o valor do saque: "))
+            
 
-            saldo, extrato = sacar(
-                saldo=saldo,
-                valor=valor,
-                extrato=extrato,
-                limite=limite,
-                numero_saques=numero_saques,
-                limite_saques=LIMITE_SAQUES,
-            )
+                saldo, extrato, numero_saques = sacar(
+                    saldo=saldo,
+                    valor=valor,
+                    extrato=extrato,
+                    limite=limite,
+                    numero_saques=numero_saques,
+                    limite_saques=LIMITE_SAQUES,
+                )
+            except ValueError:
+                print("\n@@@ Operação falhou! Por favor, informe um valor numérico válido. @@@")
 
         elif opcao == "e":
             exibir_extrato(saldo, extrato=extrato)
